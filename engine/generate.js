@@ -23,6 +23,14 @@ if (!fs.existsSync(absDataPath)) {
 // ── Load site data ─────────────────────────────────────────────
 const data = JSON.parse(fs.readFileSync(absDataPath, 'utf8'));
 
+// ── Quick input validation (guard before rendering) ────────────
+const REQUIRED_KEYS = ['meta', 'business', 'contact', 'navLinks', 'hero', 'services'];
+const missingKeys = REQUIRED_KEYS.filter(k => !data[k]);
+if (missingKeys.length) {
+  console.error(`Error: site-data.json is missing required keys: ${missingKeys.join(', ')}`);
+  process.exit(1);
+}
+
 // ── Inline CSS: concatenate tokens + base + components + responsive ──
 const cssFiles = [
   resolve('tokens', 'variables.css'),
@@ -57,6 +65,17 @@ Handlebars.registerHelper('stars', function (count) {
 // {{encodeURI "some text"}} → URL-encoded string
 Handlebars.registerHelper('encodeURI', function (str) {
   return encodeURIComponent(str || '');
+});
+
+// {{whatsappUrl number}} → "https://wa.me/number"
+// {{whatsappUrl number message}} → "https://wa.me/number?text=<encoded>"
+// Replaces 6 hand-rolled wa.me/ URLs across the partials (DRY / SRP)
+Handlebars.registerHelper('whatsappUrl', function (number, message) {
+  const base = `https://wa.me/${number || ''}`;
+  // When called with 1 data arg, Handlebars passes options hash as `message`
+  return (typeof message === 'string' && message)
+    ? `${base}?text=${encodeURIComponent(message)}`
+    : base;
 });
 
 // ── Compile master layout ──────────────────────────────────────

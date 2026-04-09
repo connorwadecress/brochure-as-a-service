@@ -24,7 +24,7 @@
               <div>
                 <p class="contact__info-label">WhatsApp</p>
                 <p class="contact__info-value">
-                  <a href="https://wa.me/{{contact.whatsapp.number}}" target="_blank">{{contact.phone.display}}</a>
+                  <a href="{{whatsappUrl contact.whatsapp.number}}" target="_blank">{{contact.phone.display}}</a>
                 </p>
               </div>
             </div>
@@ -65,7 +65,7 @@
         <div class="contact__form">
           <h3>Send Us a Message</h3>
 
-          <form id="contactForm" action="{{contact.formAction}}" method="POST">
+          <form id="contactForm" {{#if contact.formAction}}action="{{contact.formAction}}"{{/if}} method="POST">
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="John Smith" required />

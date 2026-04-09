@@ -1,0 +1,39 @@
+{
+  "_comment": "Search rotation data — edit here to add suburbs or industries without touching code (Open/Closed Principle).",
+  "suburbs": {
+    "Gauteng": [
+      "Sandton", "Randburg", "Roodepoort", "Fourways", "Midrand",
+      "Centurion", "Edenvale", "Benoni", "Boksburg", "Kempton Park",
+      "Pretoria East", "Hatfield", "Menlyn", "Bryanston", "Northcliff"
+    ],
+    "Western Cape": [
+      "Claremont", "Bellville", "Parow", "Table View", "Milnerton",
+      "Durbanville", "Wynberg", "Fish Hoek", "Strand", "Somerset West",
+      "Stellenbosch", "Paarl", "Constantia", "Sea Point", "Gardens"
+    ],
+    "KwaZulu-Natal": [
+      "Umhlanga", "Ballito", "Pinetown", "Hillcrest", "Durban North",
+      "Amanzimtoti", "Westville", "Chatsworth", "Phoenix", "Tongaat",
+      "Pietermaritzburg", "Kloof", "La Lucia", "Berea", "Morningside"
+    ]
+  },
+  "industries": {
+    "Trades & Home Services": [
+      "plumber", "electrician", "painter", "cleaning service",
+      "pest control", "locksmith", "handyman", "tiler",
+      "waterproofing", "aircon installation", "garage door repair"
+    ],
+    "Beauty & Wellness": [
+      "hair salon", "barber", "nail salon", "beauty salon",
+      "spa", "lash extensions", "brow bar", "waxing salon"
+    ],
+    "Food & Hospitality": [
+      "restaurant", "takeaway", "catering", "bakery",
+      "butchery", "coffee shop", "food truck", "pizza"
+    ],
+    "Professional Services": [
+      "tutor", "driving school", "photographer", "accountant",
+      "event planner", "dog groomer", "vet", "nursery school"
+    ]
+  }
+}

@@ -10,7 +10,7 @@
             {{#each social}}
             <a href="{{this.url}}" target="_blank" aria-label="{{this.label}}"><i class="{{this.icon}}"></i></a>
             {{/each}}
-            <a href="https://wa.me/{{contact.whatsapp.number}}" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="{{whatsappUrl contact.whatsapp.number}}" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
 
@@ -37,7 +37,7 @@
           <ul class="footer__links">
             <li><a href="tel:{{contact.phone.href}}">{{contact.phone.display}}</a></li>
             <li><a href="mailto:{{contact.email}}">{{contact.email}}</a></li>
-            <li><a href="https://wa.me/{{contact.whatsapp.number}}" target="_blank">WhatsApp Us</a></li>
+            <li><a href="{{whatsappUrl contact.whatsapp.number}}" target="_blank">WhatsApp Us</a></li>
             <li><span class="footer__links-text">{{contact.address}}</span></li>
           </ul>
         </div>

@@ -4,7 +4,7 @@
       <h2>{{ctaBanner.title}}</h2>
       <p>{{ctaBanner.subtitle}}</p>
       <div class="cta-banner__actions">
-        <a href="https://wa.me/{{contact.whatsapp.number}}?text={{encodeURI contact.whatsapp.message}}" target="_blank" class="btn btn-white">
+        <a href="{{whatsappUrl contact.whatsapp.number contact.whatsapp.message}}" target="_blank" class="btn btn-white">
           <i class="{{ctaBanner.primaryCta.icon}}"></i> {{ctaBanner.primaryCta.label}}
         </a>
         <a href="{{ctaBanner.secondaryCta.href}}" class="btn btn-outline">

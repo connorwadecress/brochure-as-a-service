@@ -1,0 +1,76 @@
+# ============================================================
+# Node.js — Engine
+# ============================================================
+engine/node_modules/
+engine/_debug_output.json
+
+# ============================================================
+# Python — Pipeline
+# ============================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+pipeline/__pycache__/
+pipeline/lib/__pycache__/
+
+# ============================================================
+# Secrets & Config (NEVER commit)
+# ============================================================
+pipeline/config.json
+
+# ============================================================
+# Runtime State (generated, not source)
+# ============================================================
+pipeline/.prospector-state.json
+
+# ============================================================
+# Temp / Lock Files
+# ============================================================
+pipeline/.~lock.*#
+*.tmp
+*.lock
+*.swp
+*.swo
+
+# ============================================================
+# OS & Editor Artifacts
+# ============================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.code-workspace
+
+# ============================================================
+# Environment
+# ============================================================
+.env
+.env.*
+!.env.example
+
+# ============================================================
+# Logs
+# ============================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================
+# Python Virtualenv
+# ============================================================
+.venv/
+venv/
+env/
+ENV/
+
+# NOTE: sites/*/index.html and sites/*/site-data.json are
+# intentionally tracked — generated HTML is the deployable
+# product and site-data.json is the source of truth for it.
+# NOTE: pipeline/lead-tracker.xlsx is intentionally tracked —
+# it holds accumulated lead data.
+# NOTE: engine/package-lock.json is intentionally tracked.

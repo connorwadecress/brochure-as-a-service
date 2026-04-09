@@ -18,7 +18,7 @@
           <p class="hero__sub">{{hero.subtitle}}</p>
 
           <div class="hero__actions">
-            <a href="https://wa.me/{{contact.whatsapp.number}}?text={{encodeURI contact.whatsapp.message}}" target="_blank" class="btn btn-whatsapp">
+            <a href="{{whatsappUrl contact.whatsapp.number contact.whatsapp.message}}" target="_blank" class="btn btn-whatsapp">
               <i class="{{hero.primaryCta.icon}}"></i> {{hero.primaryCta.label}}
             </a>
             <a href="tel:{{contact.phone.href}}" class="btn btn-outline">

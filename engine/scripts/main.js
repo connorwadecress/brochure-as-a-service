@@ -30,8 +30,16 @@
   if (form) {
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      var data = new FormData(form);
 
+      // Demo mode: no formAction configured — show success without a real POST
+      var actionAttr = form.getAttribute('action');
+      if (!actionAttr) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        return;
+      }
+
+      var data = new FormData(form);
       try {
         await fetch(form.action, {
           method: 'POST',
