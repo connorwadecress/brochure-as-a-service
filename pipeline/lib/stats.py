@@ -40,9 +40,9 @@ def show_stats(state: dict) -> None:
             continue
 
         total += 1
-        industry = ws.cell(row=row, column=2).value  or "Unknown"
-        province = ws.cell(row=row, column=3).value  or "Unknown"
-        status   = ws.cell(row=row, column=11).value or "Unknown"
+        industry = ws.cell(row=row, column=3).value  or "Unknown"   # C: Category
+        province = ws.cell(row=row, column=4).value  or "Unknown"   # D: Province
+        status   = ws.cell(row=row, column=14).value or "Unknown"   # N: Status
 
         by_status[status]     = by_status.get(status, 0)     + 1
         by_industry[industry] = by_industry.get(industry, 0) + 1
