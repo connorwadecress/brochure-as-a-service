@@ -1,0 +1,16 @@
+# Serena project configuration for BrochureAsAService
+# This project is a brochure site generator + lead prospector for SA small businesses
+
+# Project root is auto-detected; this file marks the project boundary
+project_name: BrochureAsAService
+
+# Paths to ignore (node_modules, generated output, etc.)
+ignored_paths:
+  - "engine/node_modules/**"
+  - "sites/*/index.html"
+  - "pipeline/.~lock.*"
+  - "pipeline/.prospector-state.json"
+
+# Memory patterns
+read_only_memory_patterns: []
+ignored_memory_patterns: []

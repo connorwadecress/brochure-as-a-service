@@ -1,0 +1,22 @@
+  <!-- Gallery -->
+  <section class="section section--alt" id="gallery">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <p class="section-label">{{gallery.label}}</p>
+        <h2 class="section-title">{{gallery.title}}</h2>
+        <p class="section-subtitle">{{gallery.subtitle}}</p>
+      </div>
+
+      <div class="gallery__grid">
+        {{#each gallery.items}}
+        <div class="gallery__item">
+          {{#if this.src}}
+          <img src="{{this.src}}" alt="{{this.alt}}" />
+          {{else}}
+          <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>{{this.placeholderLabel}}</span></div>
+          {{/if}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>

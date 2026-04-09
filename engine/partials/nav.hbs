@@ -1,0 +1,38 @@
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="container">
+      <div class="nav__inner">
+
+        <a href="#" class="nav__logo">
+          {{business.logoBefore}}<span>{{business.logoHighlight}}</span>
+        </a>
+
+        <ul class="nav__links">
+          {{#each navLinks}}
+          <li><a href="{{this.href}}">{{this.label}}</a></li>
+          {{/each}}
+        </ul>
+
+        <a href="https://wa.me/{{contact.whatsapp.number}}" target="_blank" class="btn btn-whatsapp nav__cta">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+
+        <button class="nav__burger" id="burgerBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile" id="mobileNav">
+    <ul>
+      {{#each navLinks}}
+      <li><a href="{{this.href}}">{{this.label}}</a></li>
+      {{/each}}
+    </ul>
+    <a href="https://wa.me/{{contact.whatsapp.number}}" target="_blank" class="btn btn-whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp Us
+    </a>
+  </div>

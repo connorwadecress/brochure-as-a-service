@@ -1,0 +1,68 @@
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero__inner">
+
+        <div class="hero__content">
+          {{#if hero.badge}}
+          <div class="hero__badge">
+            <i class="{{hero.badge.icon}}"></i>
+            {{hero.badge.text}}
+          </div>
+          {{/if}}
+
+          <h1 class="hero__title">
+            {{hero.titleLine1}}<br/>{{hero.titleLine2}}<span>{{hero.titleHighlight}}</span>
+          </h1>
+
+          <p class="hero__sub">{{hero.subtitle}}</p>
+
+          <div class="hero__actions">
+            <a href="https://wa.me/{{contact.whatsapp.number}}?text={{encodeURI contact.whatsapp.message}}" target="_blank" class="btn btn-whatsapp">
+              <i class="{{hero.primaryCta.icon}}"></i> {{hero.primaryCta.label}}
+            </a>
+            <a href="tel:{{contact.phone.href}}" class="btn btn-outline">
+              <i class="{{hero.secondaryCta.icon}}"></i> {{hero.secondaryCta.label}}
+            </a>
+          </div>
+
+          {{#if hero.trustAvatars}}
+          <div class="hero__trust">
+            <div class="hero__trust-avatars">
+              {{#each hero.trustAvatars}}<span>{{this}}</span>{{/each}}
+            </div>
+            <div class="hero__trust-text">
+              <strong>{{hero.trustText}}</strong><br/>{{hero.trustSubtext}}
+            </div>
+          </div>
+          {{/if}}
+        </div>
+
+        <div class="hero__image">
+          <div class="hero__img-wrap">
+            {{#if hero.image.src}}
+            <img src="{{hero.image.src}}" alt="{{hero.image.alt}}" />
+            {{else}}
+            <div class="hero__img-placeholder">
+              <i class="{{hero.image.placeholderIcon}}"></i>
+              <p>Replace with a<br/>great business photo</p>
+            </div>
+            {{/if}}
+          </div>
+
+          {{#if hero.floatingCard}}
+          <div class="hero__card">
+            <div class="hero__card-icon">
+              <i class="{{hero.floatingCard.icon}}"></i>
+            </div>
+            <div class="hero__card-text">
+              <strong>{{hero.floatingCard.title}}</strong>
+              <span>{{hero.floatingCard.subtitle}}</span>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+
+      </div>
+    </div>
+  </section>

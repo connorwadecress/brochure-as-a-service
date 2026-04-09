@@ -1,0 +1,13 @@
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-bar__grid">
+        {{#each trustBar}}
+        <div class="trust-stat">
+          <span class="trust-stat__number">{{this.value}}<span>{{this.suffix}}</span></span>
+          <p class="trust-stat__label">{{this.label}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>

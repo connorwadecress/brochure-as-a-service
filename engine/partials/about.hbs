@@ -1,0 +1,38 @@
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about__inner">
+
+        <div class="about__img-wrap">
+          {{#if about.image.src}}
+          <img src="{{about.image.src}}" alt="{{about.image.alt}}" />
+          {{else}}
+          <div class="about__img-placeholder">
+            <i class="{{about.image.placeholderIcon}}"></i>
+            <p>Owner / Team photo<br/>goes here</p>
+          </div>
+          {{/if}}
+        </div>
+
+        <div class="about__content">
+          <p class="section-label">{{about.label}}</p>
+          <h2 class="section-title">{{about.title}}</h2>
+
+          {{#each about.paragraphs}}
+          <p class="about__text">{{this}}</p>
+          {{/each}}
+
+          <ul class="about__list">
+            {{#each about.bulletPoints}}
+            <li><i class="{{../about.bulletIcon}}"></i> {{this}}</li>
+            {{/each}}
+          </ul>
+
+          <a href="https://wa.me/{{contact.whatsapp.number}}" target="_blank" class="btn btn-primary">
+            <i class="{{about.ctaIcon}}"></i> {{about.ctaLabel}}
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>

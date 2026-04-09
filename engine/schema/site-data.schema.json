@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Brochure Site Data",
+  "description": "Data model for generating a single-page brochure website. AI should generate this file per client.",
+  "type": "object",
+  "required": ["meta", "business", "contact", "navLinks", "hero", "services"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["title", "description"],
+      "properties": {
+        "title": { "type": "string", "description": "Page <title> — format: 'Business Name | Tagline'" },
+        "description": { "type": "string", "description": "Meta description for SEO" },
+        "googleFontsUrl": { "type": "string", "description": "Google Fonts CSS URL" },
+        "fontAwesomeUrl": { "type": "string", "description": "Font Awesome CDN URL" }
+      }
+    },
+    "palette": {
+      "type": ["object", "null"],
+      "description": "Optional colour overrides. Omit to use defaults.",
+      "properties": {
+        "brandPrimary": { "type": "string", "description": "Main brand colour hex" },
+        "brandDark": { "type": "string", "description": "Darker hover shade hex" },
+        "brandLight": { "type": "string", "description": "Light tint hex for backgrounds" },
+        "bgDark": { "type": "string", "description": "Dark section background hex" }
+      }
+    },
+    "business": {
+      "type": "object",
+      "required": ["name", "logoBefore", "logoHighlight", "tagline"],
+      "properties": {
+        "name": { "type": "string" },
+        "logoBefore": { "type": "string", "description": "Logo text before highlight" },
+        "logoHighlight": { "type": "string", "description": "Logo text in brand colour" },
+        "tagline": { "type": "string" }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "required": ["phone", "whatsapp", "email"],
+      "properties": {
+        "phone": {
+          "type": "object",
+          "properties": {
+            "display": { "type": "string" },
+            "href": { "type": "string", "description": "tel: link value with country code" }
+          }
+        },
+        "whatsapp": {
+          "type": "object",
+          "properties": {
+            "number": { "type": "string", "description": "WhatsApp number — no +, no spaces" },
+            "message": { "type": "string", "description": "Default pre-filled WhatsApp message" }
+          }
+        },
+        "email": { "type": "string" },
+        "address": { "type": "string" },
+        "formAction": { "type": ["string", "null"], "description": "Formspree or similar endpoint URL. Null for demo mode." }
+      }
+    },
+    "hours": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "days": { "type": "string" },
+          "time": { "type": "string" }
+        }
+      }
+    },
+    "social": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string" },
+          "icon": { "type": "string", "description": "Font Awesome class e.g. 'fab fa-facebook-f'" },
+          "label": { "type": "string" }
+        }
+      }
+    },
+    "navLinks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string" },
+          "href": { "type": "string" }
+        }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "properties": {
+        "badge": { "type": "object", "properties": { "icon": { "type": "string" }, "text": { "type": "string" } } },
+        "titleLine1": { "type": "string" },
+        "titleLine2": { "type": "string" },
+        "titleHighlight": { "type": "string", "description": "Character appended in brand colour (usually '.')" },
+        "subtitle": { "type": "string" },
+        "primaryCta": { "type": "object", "properties": { "label": { "type": "string" }, "icon": { "type": "string" } } },
+        "secondaryCta": { "type": "object", "properties": { "label": { "type": "string" }, "icon": { "type": "string" } } },
+        "trustAvatars": { "type": "array", "items": { "type": "string" }, "description": "2-letter initials for avatar circles" },
+        "trustText": { "type": "string" },
+        "trustSubtext": { "type": "string" },
+        "image": { "type": "object", "properties": { "src": { "type": ["string", "null"] }, "alt": { "type": "string" }, "placeholderIcon": { "type": "string" } } },
+        "floatingCard": { "type": "object", "properties": { "icon": { "type": "string" }, "title": { "type": "string" }, "subtitle": { "type": "string" } } }
+      }
+    },
+    "trustBar": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string" },
+          "suffix": { "type": "string" },
+          "label": { "type": "string" }
+        }
+      }
+    },
+    "services": {
+      "type": "object",
+      "properties": {
+        "label": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": { "type": "string" },
+              "title": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "about": {
+      "type": ["object", "null"],
+      "properties": {
+        "label": { "type": "string" },
+        "title": { "type": "string" },
+        "paragraphs": { "type": "array", "items": { "type": "string" } },
+        "bulletPoints": { "type": "array", "items": { "type": "string" } },
+        "bulletIcon": { "type": "string" },
+        "ctaLabel": { "type": "string" },
+        "ctaIcon": { "type": "string" },
+        "image": { "type": "object", "properties": { "src": { "type": ["string", "null"] }, "alt": { "type": "string" }, "placeholderIcon": { "type": "string" } } }
+      }
+    },
+    "gallery": {
+      "type": ["object", "null"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "label": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "items": { "type": "array", "items": { "type": "object", "properties": { "src": { "type": ["string", "null"] }, "alt": { "type": "string" }, "placeholderLabel": { "type": "string" } } } }
+      }
+    },
+    "testimonials": {
+      "type": ["object", "null"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "label": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stars": { "type": "integer", "minimum": 1, "maximum": 5 },
+              "quote": { "type": "string" },
+              "authorName": { "type": "string" },
+              "authorInitials": { "type": "string" },
+              "authorRole": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "ctaBanner": {
+      "type": ["object", "null"],
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "primaryCta": { "type": "object", "properties": { "label": { "type": "string" }, "icon": { "type": "string" } } },
+        "secondaryCta": { "type": "object", "properties": { "label": { "type": "string" }, "href": { "type": "string" } } }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "properties": {
+        "serviceLinks": { "type": "array", "items": { "type": "object", "properties": { "label": { "type": "string" }, "href": { "type": "string" } } } },
+        "quickLinks": { "type": "array", "items": { "type": "object", "properties": { "label": { "type": "string" }, "href": { "type": "string" } } } },
+        "creditText": { "type": "string" },
+        "creditName": { "type": "string" },
+        "creditUrl": { "type": "string" }
+      }
+    },
+    "whatsappFab": {
+      "type": ["object", "null"],
+      "properties": {
+        "tooltip": { "type": "string" },
+        "message": { "type": "string" }
+      }
+    }
+  }
+}

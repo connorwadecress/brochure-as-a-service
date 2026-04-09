@@ -1,0 +1,26 @@
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <p class="section-label">{{testimonials.label}}</p>
+        <h2 class="section-title">{{testimonials.title}}</h2>
+        <p class="section-subtitle">{{testimonials.subtitle}}</p>
+      </div>
+
+      <div class="testimonials__grid">
+        {{#each testimonials.items}}
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">{{stars this.stars}}</div>
+          <p class="testimonial-card__quote">"{{this.quote}}"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">{{this.authorInitials}}</div>
+            <div>
+              <div class="testimonial-card__name">{{this.authorName}}</div>
+              <div class="testimonial-card__role">{{this.authorRole}}</div>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>

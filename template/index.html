@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[BUSINESS NAME] | [TAGLINE]</title>
+  <meta name="description" content="[BUSINESS NAME] — [SHORT 1-LINE DESCRIPTION OF WHAT YOU DO AND WHERE]" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ============================================================
+       CUSTOMISATION VARIABLES — Change these to match your client
+       ============================================================ */
+    :root {
+      --brand-primary:   #1a6cf0;   /* Main accent colour */
+      --brand-dark:      #0f4bb5;   /* Darker shade for hover states */
+      --brand-light:     #e8f0fe;   /* Light tint for backgrounds */
+      --whatsapp-green:  #25d366;   /* Keep this — WhatsApp brand colour */
+
+      --text-heading:    #0d1117;
+      --text-body:       #374151;
+      --text-muted:      #6b7280;
+      --text-inverse:    #ffffff;
+
+      --bg-white:        #ffffff;
+      --bg-light:        #f8fafc;
+      --bg-dark:         #0d1117;
+
+      --border:          #e5e7eb;
+      --radius:          12px;
+      --radius-sm:       8px;
+
+      --shadow-sm:  0 1px 3px rgba(0,0,0,.08);
+      --shadow-md:  0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg:  0 8px 32px rgba(0,0,0,.12);
+
+      --font:       'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --nav-height: 68px;
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text-body);
+      background: var(--bg-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ============================================================
+       UTILITY
+       ============================================================ */
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section { padding: 80px 0; }
+    .section--alt { background: var(--bg-light); }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--brand-primary);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-heading);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+    }
+
+    .section-header { margin-bottom: 56px; }
+    .section-header--center { text-align: center; }
+    .section-header--center .section-subtitle { margin: 0 auto; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all .2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--brand-primary);
+      color: var(--text-inverse);
+    }
+    .btn-primary:hover {
+      background: var(--brand-dark);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brand-primary);
+      border: 2px solid var(--brand-primary);
+    }
+    .btn-outline:hover {
+      background: var(--brand-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp-green);
+      color: var(--text-inverse);
+    }
+    .btn-whatsapp:hover {
+      background: #1da851;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-white {
+      background: var(--bg-white);
+      color: var(--brand-primary);
+    }
+    .btn-white:hover {
+      background: var(--brand-light);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: box-shadow .2s;
+    }
+
+    .nav.scrolled { box-shadow: var(--shadow-md); }
+
+    .nav__inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-heading);
+    }
+    .nav__logo span { color: var(--brand-primary); }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: .95rem;
+      font-weight: 500;
+      color: var(--text-body);
+      transition: color .2s;
+    }
+    .nav__links a:hover { color: var(--brand-primary); }
+
+    .nav__cta { margin-left: 16px; }
+
+    /* Hamburger */
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav__burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-heading);
+      border-radius: 2px;
+      transition: all .3s;
+    }
+
+    /* Mobile nav */
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0; right: 0;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      z-index: 999;
+    }
+    .nav__mobile.open { display: block; }
+
+    .nav__mobile ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .nav__mobile li a {
+      display: block;
+      padding: 14px 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-body);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav__mobile .btn { width: 100%; justify-content: center; margin-top: 20px; }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      padding-top: calc(var(--nav-height) + 80px);
+      padding-bottom: 80px;
+      background: linear-gradient(135deg, var(--bg-white) 0%, var(--brand-light) 100%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(26,108,240,.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--brand-light);
+      color: var(--brand-primary);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero__badge i { font-size: 11px; }
+
+    .hero__title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--text-heading);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero__title span { color: var(--brand-primary); }
+
+    .hero__sub {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+
+    .hero__actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero__trust {
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero__trust-avatars {
+      display: flex;
+    }
+    .hero__trust-avatars span {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      border: 2px solid var(--bg-white);
+      margin-left: -8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: white;
+    }
+    .hero__trust-avatars span:first-child { margin-left: 0; }
+    .hero__trust-text {
+      font-size: .875rem;
+      color: var(--text-muted);
+    }
+    .hero__trust-text strong { color: var(--text-heading); }
+
+    /* Hero image placeholder */
+    .hero__image {
+      position: relative;
+    }
+    .hero__img-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--brand-light), var(--brand-primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero__img-placeholder {
+      text-align: center;
+      color: white;
+      padding: 24px;
+    }
+    .hero__img-placeholder i {
+      font-size: 64px;
+      opacity: .6;
+      margin-bottom: 12px;
+    }
+    .hero__img-placeholder p {
+      font-size: .875rem;
+      opacity: .7;
+    }
+
+    /* Floating card on hero image */
+    .hero__card {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero__card-icon {
+      width: 44px; height: 44px;
+      background: var(--brand-light);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-primary);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .hero__card-text strong {
+      display: block;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+    .hero__card-text span {
+      font-size: .8rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       TRUST BAR / STATS
+       ============================================================ */
+    .trust-bar {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-bar__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+
+    .trust-stat__number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-heading);
+      display: block;
+    }
+    .trust-stat__number span { color: var(--brand-primary); }
+    .trust-stat__label {
+      font-size: .875rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ============================================================
+       SERVICES
+       ============================================================ */
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: all .2s ease;
+    }
+    .service-card:hover {
+      border-color: var(--brand-primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .service-card__icon {
+      width: 52px; height: 52px;
+      background: var(--brand-light);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-primary);
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .service-card__title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 8px;
+    }
+
+    .service-card__desc {
+      font-size: .9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       ABOUT
+       ============================================================ */
+    .about__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about__img-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, var(--brand-light), var(--brand-primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .about__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about__img-placeholder {
+      text-align: center;
+      color: white;
+      padding: 24px;
+    }
+    .about__img-placeholder i {
+      font-size: 72px;
+      opacity: .5;
+      margin-bottom: 12px;
+    }
+    .about__img-placeholder p {
+      font-size: .875rem;
+      opacity: .65;
+    }
+
+    .about__list {
+      list-style: none;
+      margin: 28px 0 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .about__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: .95rem;
+      color: var(--text-body);
+    }
+    .about__list li i {
+      color: var(--brand-primary);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       GALLERY
+       ============================================================ */
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery__item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--brand-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s;
+    }
+    .gallery__item:hover { transform: scale(1.02); }
+    .gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery__item--placeholder {
+      flex-direction: column;
+      gap: 8px;
+      color: var(--brand-primary);
+      opacity: .5;
+      font-size: .8rem;
+      text-align: center;
+    }
+    .gallery__item--placeholder i { font-size: 32px; }
+
+    /* Span items for variety */
+    .gallery__item:nth-child(1) { grid-row: span 2; aspect-ratio: unset; }
+
+    /* ============================================================
+       TESTIMONIALS
+       ============================================================ */
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .testimonial-card__stars {
+      color: #f59e0b;
+      font-size: .85rem;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-card__quote {
+      font-size: .95rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-card__author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-card__avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+    .testimonial-card__name {
+      font-weight: 600;
+      font-size: .9rem;
+      color: var(--text-heading);
+    }
+    .testimonial-card__role {
+      font-size: .8rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       CONTACT / CTA SECTION
+       ============================================================ */
+    .contact { background: var(--bg-dark); color: var(--text-inverse); }
+    .contact .section-label { color: var(--brand-light); opacity: .7; }
+    .contact .section-title { color: var(--text-inverse); }
+
+    .contact__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact__info-items {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .contact__info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .contact__info-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-inverse);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact__info-label {
+      font-size: .8rem;
+      color: rgba(255,255,255,.5);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .contact__info-value {
+      font-size: 1rem;
+      color: var(--text-inverse);
+      font-weight: 500;
+    }
+    .contact__info-value a {
+      color: var(--text-inverse);
+      transition: opacity .2s;
+    }
+    .contact__info-value a:hover { opacity: .75; }
+
+    .contact__hours {
+      margin-top: 32px;
+      background: rgba(255,255,255,.07);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .contact__hours h4 {
+      font-size: .875rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.6);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 16px;
+    }
+    .contact__hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: .9rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.8);
+    }
+    .contact__hours-row:last-child { border-bottom: none; }
+    .contact__hours-row span:last-child { font-weight: 500; }
+
+    /* Contact form */
+    .contact__form {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+    .contact__form h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-inverse);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: .85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,.7);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-size: .95rem;
+      color: var(--text-inverse);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,.35); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--brand-primary);
+    }
+    .form-group select option { background: #1a1a2e; color: white; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form__submit {
+      width: 100%;
+      justify-content: center;
+      margin-top: 8px;
+      padding: 15px;
+    }
+
+    /* Success message */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 24px;
+    }
+    .form-success i {
+      font-size: 48px;
+      color: #22c55e;
+      margin-bottom: 12px;
+    }
+    .form-success p {
+      color: rgba(255,255,255,.8);
+    }
+
+    /* ============================================================
+       CTA BANNER
+       ============================================================ */
+    .cta-banner {
+      background: var(--brand-primary);
+      padding: 64px 0;
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text-inverse);
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.8);
+      margin-bottom: 32px;
+    }
+    .cta-banner__actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      background: var(--bg-dark);
+      padding: 56px 0 32px;
+    }
+
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .footer__logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-inverse);
+      margin-bottom: 14px;
+    }
+    .footer__logo span { color: var(--brand-primary); }
+
+    .footer__tagline {
+      font-size: .9rem;
+      color: rgba(255,255,255,.5);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer__social a {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.6);
+      font-size: 15px;
+      transition: all .2s;
+    }
+    .footer__social a:hover {
+      background: var(--brand-primary);
+      color: white;
+    }
+
+    .footer__col h4 {
+      font-size: .875rem;
+      font-weight: 700;
+      color: var(--text-inverse);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 20px;
+    }
+
+    .footer__links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer__links a {
+      font-size: .9rem;
+      color: rgba(255,255,255,.5);
+      transition: color .2s;
+    }
+    .footer__links a:hover { color: var(--text-inverse); }
+
+    .footer__bottom {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer__copy {
+      font-size: .85rem;
+      color: rgba(255,255,255,.35);
+    }
+    .footer__credit {
+      font-size: .85rem;
+      color: rgba(255,255,255,.25);
+    }
+    .footer__credit a {
+      color: rgba(255,255,255,.45);
+      transition: color .2s;
+    }
+    .footer__credit a:hover { color: rgba(255,255,255,.8); }
+
+    /* ============================================================
+       FLOATING WHATSAPP BUTTON
+       ============================================================ */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 56px; height: 56px;
+      background: var(--whatsapp-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      z-index: 900;
+      transition: all .2s;
+      text-decoration: none;
+    }
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(37,211,102,.55);
+    }
+
+    .whatsapp-fab__tooltip {
+      position: absolute;
+      right: 64px;
+      background: var(--bg-dark);
+      color: white;
+      font-size: .8rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+    }
+    .whatsapp-fab:hover .whatsapp-fab__tooltip { opacity: 1; }
+
+    /* ============================================================
+       RESPONSIVE — TABLET
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .footer__inner { grid-template-columns: 1fr 1fr; }
+      .trust-bar__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery__item:nth-child(1) { grid-row: span 1; aspect-ratio: 4/3; }
+    }
+
+    /* ============================================================
+       RESPONSIVE — MOBILE
+       ============================================================ */
+    @media (max-width: 768px) {
+      .section { padding: 56px 0; }
+
+      /* Nav */
+      .nav__links, .nav__cta { display: none; }
+      .nav__burger { display: flex; }
+
+      /* Hero */
+      .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero__image { display: none; } /* Hide on mobile if needed — remove to show */
+      .hero { padding-top: calc(var(--nav-height) + 48px); padding-bottom: 48px; }
+
+      /* Services */
+      .services__grid { grid-template-columns: 1fr; }
+
+      /* About */
+      .about__inner { grid-template-columns: 1fr; gap: 40px; }
+      .about__img-wrap { aspect-ratio: 4/3; }
+
+      /* Gallery */
+      .gallery__grid { grid-template-columns: 1fr; }
+
+      /* Testimonials */
+      .testimonials__grid { grid-template-columns: 1fr; }
+
+      /* Contact */
+      .contact__inner { grid-template-columns: 1fr; gap: 40px; }
+      .contact__form { padding: 24px; }
+
+      /* Footer */
+      .footer__inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer__bottom { flex-direction: column; text-align: center; }
+
+      /* CTA banner */
+      .cta-banner__actions { flex-direction: column; align-items: center; }
+
+      /* Trust bar */
+      .trust-bar__grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Hero actions */
+      .hero__actions { flex-direction: column; }
+      .hero__actions .btn { width: 100%; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .trust-bar__grid { grid-template-columns: 1fr 1fr; }
+      .hero__title { font-size: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="navbar">
+    <div class="container">
+      <div class="nav__inner">
+
+        <a href="#" class="nav__logo">
+          [Business<span>Name</span>]
+        </a>
+
+        <ul class="nav__links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Our Work</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- ✏️ Replace 27XXXXXXXXX with client's WhatsApp number (no spaces, no +) -->
+        <a href="https://wa.me/27XXXXXXXXX" target="_blank" class="btn btn-whatsapp nav__cta">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+
+        <button class="nav__burger" id="burgerBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile" id="mobileNav">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Our Work</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/27XXXXXXXXX" target="_blank" class="btn btn-whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp Us
+    </a>
+  </div>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero__inner">
+
+        <div class="hero__content">
+          <div class="hero__badge">
+            <i class="fas fa-map-marker-alt"></i>
+            <!-- ✏️ Replace with client's city/area -->
+            Serving [City / Area], South Africa
+          </div>
+
+          <h1 class="hero__title">
+            <!-- ✏️ Replace with a punchy headline that captures what they do -->
+            [Compelling headline<br/>about what you do<span>.</span>]
+          </h1>
+
+          <p class="hero__sub">
+            <!-- ✏️ 1-2 sentences: what you do, for who, and why you're great -->
+            [One or two sentences describing the business value proposition.
+            Keep it clear, benefit-focused, and local.]
+          </p>
+
+          <div class="hero__actions">
+            <!-- ✏️ Replace 27XXXXXXXXX with WhatsApp number -->
+            <a href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I'd%20like%20to%20get%20a%20quote%20please!" target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Get a Free Quote
+            </a>
+            <a href="tel:+27XXXXXXXXXX" class="btn btn-outline">
+              <i class="fas fa-phone"></i> Call Us Now
+            </a>
+          </div>
+
+          <div class="hero__trust">
+            <div class="hero__trust-avatars">
+              <!-- ✏️ Replace initials with real client initials if available -->
+              <span>TM</span><span>SN</span><span>AP</span><span>KD</span>
+            </div>
+            <div class="hero__trust-text">
+              <!-- ✏️ Replace with real number of happy clients -->
+              <strong>50+ happy clients</strong><br/>across [City/Region]
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__image">
+          <div class="hero__img-wrap">
+            <!-- ✏️ Replace src with a real photo of the business/work -->
+            <!-- <img src="images/hero.jpg" alt="[Business Name]" /> -->
+            <div class="hero__img-placeholder">
+              <!-- ✏️ Change icon to match the business type: fa-scissors, fa-hard-hat, fa-utensils, fa-paint-roller etc. -->
+              <i class="fas fa-star"></i>
+              <p>Replace with a<br/>great business photo</p>
+            </div>
+          </div>
+
+          <!-- Floating trust card — edit or remove -->
+          <div class="hero__card">
+            <div class="hero__card-icon">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <div class="hero__card-text">
+              <strong>Fully Insured</strong>
+              <span>Licensed &amp; Professional</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TRUST BAR / STATS
+       ============================================================ -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-bar__grid">
+
+        <!-- ✏️ Replace all numbers and labels with real data from the client -->
+        <div class="trust-stat">
+          <span class="trust-stat__number">5<span>+</span></span>
+          <p class="trust-stat__label">Years in Business</p>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat__number">200<span>+</span></span>
+          <p class="trust-stat__label">Projects Completed</p>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat__number">98<span>%</span></span>
+          <p class="trust-stat__label">Happy Clients</p>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-stat__number">4.9<span>★</span></span>
+          <p class="trust-stat__label">Average Rating</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES
+       ============================================================ -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+
+      <div class="section-header section-header--center">
+        <p class="section-label">What We Offer</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+          <!-- ✏️ Brief sentence about services -->
+          [Short sentence about the range of services offered and who they're for.]
+        </p>
+      </div>
+
+      <div class="services__grid">
+
+        <!-- ✏️ Repeat/remove cards as needed. Icon options at fontawesome.com -->
+        <!-- SERVICE 1 -->
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-star"></i></div>
+          <h3 class="service-card__title">[Service Name]</h3>
+          <p class="service-card__desc">
+            [Short description of this service. What's included, what's the outcome for the customer.]
+          </p>
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-star"></i></div>
+          <h3 class="service-card__title">[Service Name]</h3>
+          <p class="service-card__desc">
+            [Short description of this service. What's included, what's the outcome for the customer.]
+          </p>
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-star"></i></div>
+          <h3 class="service-card__title">[Service Name]</h3>
+          <p class="service-card__desc">
+            [Short description of this service. What's included, what's the outcome for the customer.]
+          </p>
+        </div>
+
+        <!-- SERVICE 4 -->
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-star"></i></div>
+          <h3 class="service-card__title">[Service Name]</h3>
+          <p class="service-card__desc">
+            [Short description of this service. What's included, what's the outcome for the customer.]
+          </p>
+        </div>
+
+        <!-- SERVICE 5 -->
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-star"></i></div>
+          <h3 class="service-card__title">[Service Name]</h3>
+          <p class="service-card__desc">
+            [Short description of this service. What's included, what's the outcome for the customer.]
+          </p>
+        </div>
+
+        <!-- SERVICE 6 -->
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-star"></i></div>
+          <h3 class="service-card__title">[Service Name]</h3>
+          <p class="service-card__desc">
+            [Short description of this service. What's included, what's the outcome for the customer.]
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about__inner">
+
+        <div class="about__img-wrap">
+          <!-- ✏️ Replace with a photo of the owner or team -->
+          <!-- <img src="images/about.jpg" alt="About [Business Name]" /> -->
+          <div class="about__img-placeholder">
+            <i class="fas fa-user-circle"></i>
+            <p>Owner / Team photo<br/>goes here</p>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <p class="section-label">Our Story</p>
+          <h2 class="section-title">About [Business Name]</h2>
+
+          <p style="color: var(--text-muted); margin-bottom: 16px;">
+            <!-- ✏️ 1-2 paragraphs about the business, owner's background, why they started, what makes them different -->
+            [Paragraph 1: Who you are, how long you've been running, and what drives you. Keep it personal and authentic.]
+          </p>
+          <p style="color: var(--text-muted);">
+            [Paragraph 2: What makes you different from competitors. Could be your approach, your experience, your guarantees, or your community ties.]
+          </p>
+
+          <ul class="about__list">
+            <!-- ✏️ Replace with real trust points -->
+            <li><i class="fas fa-check-circle"></i> [Key differentiator or credential]</li>
+            <li><i class="fas fa-check-circle"></i> [Key differentiator or credential]</li>
+            <li><i class="fas fa-check-circle"></i> [Key differentiator or credential]</li>
+            <li><i class="fas fa-check-circle"></i> [Key differentiator or credential]</li>
+          </ul>
+
+          <a href="https://wa.me/27XXXXXXXXX" target="_blank" class="btn btn-primary">
+            <i class="fab fa-whatsapp"></i> Chat to Us
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       GALLERY / WORK
+       ============================================================ -->
+  <section class="section section--alt" id="gallery">
+    <div class="container">
+
+      <div class="section-header section-header--center">
+        <p class="section-label">Our Work</p>
+        <h2 class="section-title">See What We Do</h2>
+        <p class="section-subtitle">
+          [A short sentence inviting visitors to view examples of your work or completed projects.]
+        </p>
+      </div>
+
+      <div class="gallery__grid">
+        <!-- ✏️ Replace placeholders with real project/work photos -->
+        <div class="gallery__item">
+          <!-- <img src="images/gallery-1.jpg" alt="Project 1" /> -->
+          <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Photo 1</span></div>
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Photo 2</span></div>
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Photo 3</span></div>
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Photo 4</span></div>
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Photo 5</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="section" id="testimonials">
+    <div class="container">
+
+      <div class="section-header section-header--center">
+        <p class="section-label">Happy Clients</p>
+        <h2 class="section-title">What People Say</h2>
+        <p class="section-subtitle">
+          Real feedback from real customers in [City/Area].
+        </p>
+      </div>
+
+      <div class="testimonials__grid">
+
+        <!-- ✏️ Replace with real testimonials from client's Google Reviews / WhatsApp feedback -->
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">
+            "[Paste a real 2-3 sentence testimonial here. The more specific, the more credible.]"
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">TM</div>
+            <div>
+              <div class="testimonial-card__name">[Client Name]</div>
+              <div class="testimonial-card__role">[Location / Source e.g. Google Review]</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">
+            "[Paste a real 2-3 sentence testimonial here. The more specific, the more credible.]"
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">SN</div>
+            <div>
+              <div class="testimonial-card__name">[Client Name]</div>
+              <div class="testimonial-card__role">[Location / Source]</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">
+            "[Paste a real 2-3 sentence testimonial here. The more specific, the more credible.]"
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AP</div>
+            <div>
+              <div class="testimonial-card__name">[Client Name]</div>
+              <div class="testimonial-card__role">[Location / Source]</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA BANNER
+       ============================================================ -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to get started?</h2>
+      <p>Contact us today — we'll respond within the hour.</p>
+      <div class="cta-banner__actions">
+        <a href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I'd%20like%20to%20get%20a%20quote!" target="_blank" class="btn btn-white">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+        <a href="#contact" class="btn btn-outline" style="color:white; border-color:rgba(255,255,255,.5);">
+          Send a Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+
+        <div class="contact__info">
+          <p class="section-label">Get In Touch</p>
+          <h2 class="section-title">Contact Us</h2>
+
+          <div class="contact__info-items">
+
+            <!-- ✏️ Replace all contact details -->
+            <div class="contact__info-item">
+              <div class="contact__info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <p class="contact__info-label">Phone</p>
+                <p class="contact__info-value">
+                  <a href="tel:+270XXXXXXXXX">0XX XXX XXXX</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact__info-item">
+              <div class="contact__info-icon"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <p class="contact__info-label">WhatsApp</p>
+                <p class="contact__info-value">
+                  <a href="https://wa.me/27XXXXXXXXX" target="_blank">0XX XXX XXXX</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact__info-item">
+              <div class="contact__info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <p class="contact__info-label">Email</p>
+                <p class="contact__info-value">
+                  <a href="mailto:hello@businessname.co.za">hello@businessname.co.za</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact__info-item">
+              <div class="contact__info-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <p class="contact__info-label">Location</p>
+                <p class="contact__info-value">[Area / Suburb], [City], South Africa</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contact__hours">
+            <h4>Trading Hours</h4>
+            <!-- ✏️ Update hours to match the client's schedule -->
+            <div class="contact__hours-row">
+              <span>Monday – Friday</span>
+              <span>08:00 – 17:00</span>
+            </div>
+            <div class="contact__hours-row">
+              <span>Saturday</span>
+              <span>08:00 – 13:00</span>
+            </div>
+            <div class="contact__hours-row">
+              <span>Sunday</span>
+              <span>Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <!-- ✏️ To make this form work:
+             Option A (easiest): Replace action URL with your Formspree endpoint — https://formspree.io
+             Option B: Use a mailto link and remove the form
+             Option C: Hook up your own backend -->
+        <div class="contact__form">
+          <h3>Send Us a Message</h3>
+
+          <form id="contactForm" action="https://formspree.io/f/XXXXXXXX" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="073 XXX XXXX" required />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <!-- ✏️ Replace options with real services -->
+                <option value="">Select a service...</option>
+                <option>[Service 1]</option>
+                <option>[Service 2]</option>
+                <option>[Service 3]</option>
+                <option>Other / Not sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us a bit about what you need..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form__submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-circle-check"></i>
+            <p>Thanks! We'll be in touch soon.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div>
+          <div class="footer__logo">[Business<span>Name</span>]</div>
+          <p class="footer__tagline">
+            [One-line tagline that captures your value proposition and location.]
+          </p>
+          <div class="footer__social">
+            <!-- ✏️ Add real social links. Remove icons you don't use. -->
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/27XXXXXXXXX" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <!-- ✏️ Link to service sections or individual service pages -->
+            <li><a href="#services">[Service 1]</a></li>
+            <li><a href="#services">[Service 2]</a></li>
+            <li><a href="#services">[Service 3]</a></li>
+            <li><a href="#services">[Service 4]</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Our Work</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="tel:+270XXXXXXXXX">0XX XXX XXXX</a></li>
+            <li><a href="mailto:hello@businessname.co.za">hello@businessname.co.za</a></li>
+            <li><a href="https://wa.me/27XXXXXXXXX" target="_blank">WhatsApp Us</a></li>
+            <li style="color: rgba(255,255,255,.35); pointer-events:none;">[Area], [City]</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; <span id="year"></span> [Business Name]. All rights reserved.
+        </p>
+        <p class="footer__credit">
+          Website by <a href="https://agilebridge.co.za" target="_blank">Agile Bridge</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+       ============================================================ -->
+  <!-- ✏️ Replace 27XXXXXXXXX with the client's number -->
+  <a href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I%20saw%20your%20website%20and%20I'd%20like%20to%20enquire!"
+     target="_blank"
+     class="whatsapp-fab"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-fab__tooltip">Chat with us!</span>
+  </a>
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    // Auto-update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navbar scroll shadow
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile hamburger toggle
+    const burger = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    burger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+
+    // Close mobile nav when a link is clicked
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+      });
+    });
+
+    // Contact form — show success message on submit
+    // (Only works if using Formspree or similar — otherwise handle server-side)
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+
+        // If using Formspree, uncomment and replace with your endpoint:
+        // try {
+        //   await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        //   form.style.display = 'none';
+        //   successMsg.style.display = 'block';
+        // } catch(err) { alert('Something went wrong. Please try WhatsApp instead.'); }
+
+        // ====================================================
+        // DEMO: Just shows success message without submitting
+        // Remove the lines below once Formspree is configured
+        // ====================================================
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      });
+    }
+
+    // Smooth anchor offset (accounts for fixed navbar)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = navbar.offsetHeight + 16;
+          window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

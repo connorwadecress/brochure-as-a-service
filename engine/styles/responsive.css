@@ -1,0 +1,64 @@
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .footer__inner { grid-template-columns: 1fr 1fr; }
+  .trust-bar__grid { grid-template-columns: repeat(2, 1fr); gap: var(--site-spacing-lg); }
+  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery__item:nth-child(1) { grid-row: span 1; aspect-ratio: 4/3; }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .section { padding: 56px 0; }
+
+  /* Nav */
+  .nav__links, .nav__cta { display: none; }
+  .nav__burger { display: flex; }
+
+  /* Hero */
+  .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero__image { display: none; }
+  .hero { padding-top: calc(var(--site-nav-height) + var(--site-spacing-2xl)); padding-bottom: var(--site-spacing-2xl); }
+
+  /* Services */
+  .services__grid { grid-template-columns: 1fr; }
+
+  /* About */
+  .about__inner { grid-template-columns: 1fr; gap: 40px; }
+  .about__img-wrap { aspect-ratio: 4/3; }
+
+  /* Gallery */
+  .gallery__grid { grid-template-columns: 1fr; }
+
+  /* Testimonials */
+  .testimonials__grid { grid-template-columns: 1fr; }
+
+  /* Contact */
+  .contact__inner { grid-template-columns: 1fr; gap: 40px; }
+  .contact__form { padding: var(--site-spacing-lg); }
+
+  /* Footer */
+  .footer__inner { grid-template-columns: 1fr; gap: var(--site-spacing-xl); }
+  .footer__bottom { flex-direction: column; text-align: center; }
+
+  /* CTA banner */
+  .cta-banner__actions { flex-direction: column; align-items: center; }
+
+  /* Trust bar */
+  .trust-bar__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Hero actions */
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .trust-bar__grid { grid-template-columns: 1fr 1fr; }
+  .hero__title { font-size: 2rem; }
+}

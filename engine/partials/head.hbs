@@ -1,0 +1,26 @@
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="{{{meta.googleFontsUrl}}}" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{{{meta.fontAwesomeUrl}}}" />
+
+  <style>
+{{{inlineCss}}}
+  </style>
+{{#if palette}}
+  <style>
+    :root {
+      {{#if palette.brandPrimary}}--site-brand-primary: {{palette.brandPrimary}};{{/if}}
+      {{#if palette.brandDark}}--site-brand-dark: {{palette.brandDark}};{{/if}}
+      {{#if palette.brandLight}}--site-brand-light: {{palette.brandLight}};{{/if}}
+      {{#if palette.bgDark}}--site-bg-dark: {{palette.bgDark}};{{/if}}
+    }
+  </style>
+{{/if}}

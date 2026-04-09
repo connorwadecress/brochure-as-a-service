@@ -1,0 +1,87 @@
+/* ============================================================
+   DESIGN TOKENS — Lepton X-inspired --site-* prefix
+   These are sensible defaults. Per-site palette overrides
+   are injected via a second :root{} block from site-data.json.
+   ============================================================ */
+:root {
+  /* === Brand === */
+  --site-brand-primary:     #1a6cf0;
+  --site-brand-dark:        #0f4bb5;
+  --site-brand-light:       #e8f0fe;
+
+  /* === WhatsApp (fixed brand colours) === */
+  --site-whatsapp-green:    #25d366;
+  --site-whatsapp-hover:    #1da851;
+
+  /* === Semantic === */
+  --site-color-star:        #f59e0b;
+  --site-color-success:     #22c55e;
+
+  /* === Text === */
+  --site-text-heading:      #0d1117;
+  --site-text-body:         #374151;
+  --site-text-muted:        #6b7280;
+  --site-text-inverse:      #ffffff;
+
+  /* === Backgrounds === */
+  --site-bg-white:          #ffffff;
+  --site-bg-light:          #f8fafc;
+  --site-bg-dark:           #0d1117;
+  --site-bg-form-dropdown:  #1a1a2e;
+
+  /* === Border === */
+  --site-border-color:      #e5e7eb;
+
+  /* === Radius === */
+  --site-radius-xs:         6px;
+  --site-radius-sm:         8px;
+  --site-radius:            12px;
+  --site-radius-lg:         20px;
+  --site-radius-full:       50%;
+  --site-radius-pill:       100px;
+
+  /* === Shadows === */
+  --site-shadow-sm:         0 1px 3px rgba(0,0,0,.08);
+  --site-shadow-md:         0 4px 16px rgba(0,0,0,.10);
+  --site-shadow-lg:         0 8px 32px rgba(0,0,0,.12);
+
+  /* === Spacing === */
+  --site-spacing-xs:        4px;
+  --site-spacing-sm:        8px;
+  --site-spacing-md:        16px;
+  --site-spacing-lg:        24px;
+  --site-spacing-xl:        32px;
+  --site-spacing-2xl:       48px;
+  --site-spacing-3xl:       64px;
+  --site-spacing-4xl:       80px;
+
+  /* === Typography === */
+  --site-font-family:       'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --site-font-size-xs:      0.8rem;
+  --site-font-size-sm:      0.85rem;
+  --site-font-size-base:    1rem;
+  --site-font-size-md:      1.05rem;
+  --site-font-size-lg:      1.2rem;
+  --site-font-size-xl:      clamp(1.75rem, 4vw, 2.5rem);
+  --site-font-size-2xl:     clamp(2.2rem, 5vw, 3.5rem);
+  --site-font-size-label:   13px;
+
+  /* === Layout === */
+  --site-nav-height:        68px;
+  --site-container-max:     1140px;
+  --site-container-padding: 24px;
+
+  /* === Overlays (dark-section glass effects) === */
+  --site-overlay-light-95:  rgba(255,255,255,.95);
+  --site-overlay-white-05:  rgba(255,255,255,.05);
+  --site-overlay-white-07:  rgba(255,255,255,.07);
+  --site-overlay-white-08:  rgba(255,255,255,.08);
+  --site-overlay-white-10:  rgba(255,255,255,.1);
+  --site-overlay-white-15:  rgba(255,255,255,.15);
+  --site-overlay-white-25:  rgba(255,255,255,.25);
+  --site-overlay-white-35:  rgba(255,255,255,.35);
+  --site-overlay-white-50:  rgba(255,255,255,.5);
+  --site-overlay-white-60:  rgba(255,255,255,.6);
+  --site-overlay-white-70:  rgba(255,255,255,.7);
+  --site-overlay-white-80:  rgba(255,255,255,.8);
+}

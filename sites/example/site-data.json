@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "Smith Plumbing | Reliable Plumbers in Cape Town",
+    "description": "Smith Plumbing — trusted local plumbers serving Cape Town since 2015.",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+    "fontAwesomeUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  },
+
+  "palette": {
+    "brandPrimary": "#2563eb",
+    "brandDark": "#1d4ed8",
+    "brandLight": "#dbeafe"
+  },
+
+  "business": {
+    "name": "Smith Plumbing",
+    "logoBefore": "Smith",
+    "logoHighlight": "Plumbing",
+    "tagline": "Reliable plumbing you can trust, right here in Cape Town."
+  },
+
+  "contact": {
+    "phone": { "display": "021 555 1234", "href": "+27215551234" },
+    "whatsapp": { "number": "27215551234", "message": "Hi, I'd like to get a quote please!" },
+    "email": "info@smithplumbing.co.za",
+    "address": "Gardens, Cape Town, South Africa",
+    "formAction": "https://formspree.io/f/xyzabc123"
+  },
+
+  "hours": [
+    { "days": "Monday – Friday", "time": "07:00 – 17:00" },
+    { "days": "Saturday", "time": "08:00 – 13:00" },
+    { "days": "Sunday & Public Holidays", "time": "Emergency only" }
+  ],
+
+  "social": [
+    { "url": "https://facebook.com/smithplumbing", "icon": "fab fa-facebook-f", "label": "Facebook" },
+    { "url": "https://instagram.com/smithplumbing", "icon": "fab fa-instagram", "label": "Instagram" }
+  ],
+
+  "navLinks": [
+    { "label": "Services", "href": "#services" },
+    { "label": "About", "href": "#about" },
+    { "label": "Our Work", "href": "#gallery" },
+    { "label": "Reviews", "href": "#testimonials" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+
+  "hero": {
+    "badge": { "icon": "fas fa-map-marker-alt", "text": "Serving Cape Town & surrounds" },
+    "titleLine1": "Expert Plumbing",
+    "titleLine2": "Services You Can Trust",
+    "titleHighlight": ".",
+    "subtitle": "From burst pipes to full bathroom renovations, we deliver fast, professional plumbing at fair prices. Trusted by 200+ Cape Town homes and businesses.",
+    "primaryCta": { "label": "Get a Free Quote", "icon": "fab fa-whatsapp" },
+    "secondaryCta": { "label": "Call Us Now", "icon": "fas fa-phone" },
+    "trustAvatars": ["TM", "SN", "AP", "KD"],
+    "trustText": "200+ happy clients",
+    "trustSubtext": "across Cape Town",
+    "image": { "src": null, "alt": "Smith Plumbing at work", "placeholderIcon": "fas fa-wrench" },
+    "floatingCard": { "icon": "fas fa-shield-halved", "title": "Fully Insured", "subtitle": "Licensed & Professional" }
+  },
+
+  "trustBar": [
+    { "value": "8", "suffix": "+", "label": "Years in Business" },
+    { "value": "200", "suffix": "+", "label": "Jobs Completed" },
+    { "value": "98", "suffix": "%", "label": "Happy Clients" },
+    { "value": "4.9", "suffix": "★", "label": "Google Rating" }
+  ],
+
+  "services": {
+    "label": "What We Offer",
+    "title": "Our Services",
+    "subtitle": "Comprehensive plumbing solutions for homes and businesses across Cape Town.",
+    "items": [
+      { "icon": "fas fa-faucet-drip", "title": "Leak Repairs", "description": "Fast detection and repair of leaks in pipes, taps, and fixtures. We minimise water damage and get things flowing properly again." },
+      { "icon": "fas fa-toilet", "title": "Bathroom Plumbing", "description": "Full installations and renovations — from toilets and basins to showers and baths. Clean, professional workmanship every time." },
+      { "icon": "fas fa-fire-burner", "title": "Geyser Services", "description": "Installation, repair, and maintenance of electric and solar geysers. Stay compliant and never run out of hot water." },
+      { "icon": "fas fa-pipe-valve", "title": "Pipe Replacement", "description": "Old, corroded, or burst pipe upgrades using quality materials built to last. We handle copper, PVC, and PEX systems." },
+      { "icon": "fas fa-sink", "title": "Drain Cleaning", "description": "Blocked drains cleared fast with professional equipment. We tackle kitchens, bathrooms, and outdoor drains." },
+      { "icon": "fas fa-house-chimney-crack", "title": "Emergency Plumbing", "description": "24/7 emergency callout for burst pipes, flooding, and sewage backups. Fast response when you need it most." }
+    ]
+  },
+
+  "about": {
+    "label": "Our Story",
+    "title": "About Smith Plumbing",
+    "paragraphs": [
+      "Founded in 2015 by John Smith, a master plumber with 15 years of experience, Smith Plumbing has grown from a one-man operation into Cape Town's most trusted plumbing service.",
+      "What sets us apart is our commitment to transparent pricing and clean workmanship. We treat your home like our own — and we always leave it cleaner than we found it."
+    ],
+    "bulletPoints": [
+      "Fully licensed & insured",
+      "Transparent, upfront pricing",
+      "Same-day service available",
+      "5-year workmanship guarantee"
+    ],
+    "bulletIcon": "fas fa-check-circle",
+    "ctaLabel": "Chat to Us",
+    "ctaIcon": "fab fa-whatsapp",
+    "image": { "src": null, "alt": "About Smith Plumbing", "placeholderIcon": "fas fa-user-circle" }
+  },
+
+  "gallery": {
+    "enabled": true,
+    "label": "Our Work",
+    "title": "See What We Do",
+    "subtitle": "Browse examples of our recent plumbing projects across Cape Town.",
+    "items": [
+      { "src": null, "alt": "Bathroom renovation", "placeholderLabel": "Photo 1" },
+      { "src": null, "alt": "Geyser installation", "placeholderLabel": "Photo 2" },
+      { "src": null, "alt": "Pipe repair", "placeholderLabel": "Photo 3" },
+      { "src": null, "alt": "Kitchen plumbing", "placeholderLabel": "Photo 4" },
+      { "src": null, "alt": "Drain cleaning", "placeholderLabel": "Photo 5" }
+    ]
+  },
+
+  "testimonials": {
+    "enabled": true,
+    "label": "Happy Clients",
+    "title": "What People Say",
+    "subtitle": "Real feedback from real customers in Cape Town.",
+    "items": [
+      {
+        "stars": 5,
+        "quote": "John came out within an hour of my call and fixed the burst pipe quickly. Professional, friendly, and very fairly priced. Highly recommended!",
+        "authorName": "Thandi Mokoena",
+        "authorInitials": "TM",
+        "authorRole": "Google Review"
+      },
+      {
+        "stars": 5,
+        "quote": "Excellent work on our full bathroom renovation. Everything was done on time, on budget, and to a really high standard. Will definitely use again.",
+        "authorName": "Sarah Naidoo",
+        "authorInitials": "SN",
+        "authorRole": "Google Review"
+      },
+      {
+        "stars": 5,
+        "quote": "Most reliable plumber I've ever used. They show up on time, explain everything clearly, and the workmanship is top-notch. Five stars all round.",
+        "authorName": "Andre Pretorius",
+        "authorInitials": "AP",
+        "authorRole": "Facebook Review"
+      }
+    ]
+  },
+
+  "ctaBanner": {
+    "title": "Ready to get started?",
+    "subtitle": "Contact us today — we'll respond within the hour.",
+    "primaryCta": { "label": "WhatsApp Us", "icon": "fab fa-whatsapp" },
+    "secondaryCta": { "label": "Send a Message", "href": "#contact" }
+  },
+
+  "footer": {
+    "serviceLinks": [
+      { "label": "Leak Repairs", "href": "#services" },
+      { "label": "Bathroom Plumbing", "href": "#services" },
+      { "label": "Geyser Services", "href": "#services" },
+      { "label": "Emergency Plumbing", "href": "#services" }
+    ],
+    "quickLinks": [
+      { "label": "Home", "href": "#home" },
+      { "label": "About Us", "href": "#about" },
+      { "label": "Our Work", "href": "#gallery" },
+      { "label": "Reviews", "href": "#testimonials" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "creditText": "Website by",
+    "creditName": "Agile Bridge",
+    "creditUrl": "https://agilebridge.co.za"
+  },
+
+  "whatsappFab": {
+    "tooltip": "Chat with us!",
+    "message": "Hi, I saw your website and I'd like to enquire!"
+  }
+}

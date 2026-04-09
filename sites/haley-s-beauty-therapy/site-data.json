@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "Haley's Beauty Therapy | Professional Gel Toes in Durban",
+    "description": "Haley's Beauty Therapy — professional gel toe services in Chatsworth, Durban. Quality beauty treatments using professional-grade products.",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+    "fontAwesomeUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  },
+  "palette": {
+    "brandPrimary": "#ab6fcd",
+    "brandDark": "#8a569a",
+    "brandLight": "#f3e9f8"
+  },
+  "business": {
+    "name": "Haley's Beauty Therapy",
+    "logoBefore": "Haley's",
+    "logoHighlight": "Beauty Therapy",
+    "tagline": "Professional beauty treatments with premium products right here in Chatsworth."
+  },
+  "contact": {
+    "phone": {
+      "display": "083 654 3941",
+      "href": "+27836543941"
+    },
+    "whatsapp": {
+      "number": "27836543941",
+      "message": "Hi! I'd like to book a gel toe appointment please."
+    },
+    "email": "",
+    "address": "107 Klaarwater Road, Shallcross, Chatsworth, South Africa",
+    "formAction": null
+  },
+  "hours": [
+    {
+      "days": "Monday – Friday",
+      "time": "10:00 – 18:00"
+    },
+    {
+      "days": "Saturday",
+      "time": "08:30 – 15:00"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed"
+    }
+  ],
+  "social": [
+    {
+      "url": "https://www.facebook.com/haleysbeautytherapy",
+      "icon": "fab fa-facebook-f",
+      "label": "Facebook"
+    },
+    {
+      "url": "https://www.instagram.com/haleysbeauty_/",
+      "icon": "fab fa-instagram",
+      "label": "Instagram"
+    }
+  ],
+  "navLinks": [
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Reviews",
+      "href": "#testimonials"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "badge": {
+      "icon": "fas fa-map-marker-alt",
+      "text": "Chatsworth, Durban"
+    },
+    "titleLine1": "Beautiful Gel",
+    "titleLine2": "Toes Done Right",
+    "titleHighlight": ".",
+    "subtitle": "Professional gel toe treatments with premium products and expert care. Book your appointment today and step out with confidence.",
+    "primaryCta": {
+      "label": "Book Now",
+      "icon": "fab fa-whatsapp"
+    },
+    "secondaryCta": {
+      "label": "Call Us",
+      "icon": "fas fa-phone"
+    },
+    "trustAvatars": [
+      "LM",
+      "HC",
+      "NP"
+    ],
+    "trustText": "Trusted by locals",
+    "trustSubtext": "in Chatsworth & surrounds",
+    "image": {
+      "src": null,
+      "alt": "Haley's Beauty Therapy gel toes",
+      "placeholderIcon": "fas fa-cut"
+    },
+    "floatingCard": {
+      "icon": "fas fa-sparkles",
+      "title": "Premium Products",
+      "subtitle": "Professional-grade quality"
+    }
+  },
+  "trustBar": [
+    {
+      "value": "100",
+      "suffix": "%",
+      "label": "Professional Results"
+    },
+    {
+      "value": "5",
+      "suffix": "★",
+      "label": "Quality Standards"
+    },
+    {
+      "value": "Fresh",
+      "suffix": "",
+      "label": "Designs Weekly"
+    },
+    {
+      "value": "Expert",
+      "suffix": "",
+      "label": "Application"
+    }
+  ],
+  "services": {
+    "label": "What We Offer",
+    "title": "Our Services",
+    "subtitle": "Professional beauty treatments tailored to make you feel confident and pampered.",
+    "items": [
+      {
+        "icon": "fas fa-foot",
+        "title": "Gel Toes",
+        "description": "Stunning, long-lasting gel toe treatments using professional-grade products. Perfect for special occasions or everyday luxury — your nails will shine for weeks."
+      }
+    ]
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Haley's Beauty Therapy",
+    "paragraphs": [
+      "Welcome to Haley's Beauty Therapy — your go-to destination for professional beauty treatments in Chatsworth. We pride ourselves on delivering expert-level care with premium products and a personal touch.",
+      "Every client is unique, and we take time to understand what makes you feel beautiful. From the moment you walk in, you'll experience friendly service, attention to detail, and results that last."
+    ],
+    "bulletPoints": [
+      "Professional-grade products",
+      "Expert application every time",
+      "Long-lasting results",
+      "Welcoming, relaxing atmosphere"
+    ],
+    "bulletIcon": "fas fa-check-circle",
+    "ctaLabel": "Get in Touch",
+    "ctaIcon": "fab fa-whatsapp",
+    "image": {
+      "src": null,
+      "alt": "About Haley's Beauty Therapy",
+      "placeholderIcon": "fas fa-heart"
+    }
+  },
+  "gallery": {
+    "enabled": true,
+    "label": "Our Work",
+    "title": "See Our Designs",
+    "subtitle": "Browse beautiful gel toe designs from our recent clients.",
+    "items": [
+      {
+        "src": null,
+        "alt": "Gel toe design 1",
+        "placeholderLabel": "Design 1"
+      },
+      {
+        "src": null,
+        "alt": "Gel toe design 2",
+        "placeholderLabel": "Design 2"
+      },
+      {
+        "src": null,
+        "alt": "Gel toe design 3",
+        "placeholderLabel": "Design 3"
+      },
+      {
+        "src": null,
+        "alt": "Gel toe design 4",
+        "placeholderLabel": "Design 4"
+      },
+      {
+        "src": null,
+        "alt": "Gel toe design 5",
+        "placeholderLabel": "Design 5"
+      }
+    ]
+  },
+  "testimonials": {
+    "enabled": true,
+    "label": "Client Feedback",
+    "title": "What People Say",
+    "subtitle": "Real reviews from happy clients in Durban.",
+    "items": [
+      {
+        "stars": 5,
+        "quote": "Haley's work is absolutely flawless. My gel toes look incredible and lasted for weeks without chipping. The service is so friendly and professional — highly recommended!",
+        "authorName": "Lucretia Mohan",
+        "authorInitials": "LM",
+        "authorRole": "Client Review"
+      },
+      {
+        "stars": 5,
+        "quote": "I've been getting my gel toes done at Haley's for months now. The designs are creative, the products are clearly premium quality, and the attention to detail is amazing.",
+        "authorName": "Naledi Petersen",
+        "authorInitials": "NP",
+        "authorRole": "Regular Client"
+      },
+      {
+        "stars": 5,
+        "quote": "Best gel toe experience in Chatsworth. Haley is so skilled and makes you feel completely at ease. My nails have never looked better — will definitely be back!",
+        "authorName": "Hlengiwe Cele",
+        "authorInitials": "HC",
+        "authorRole": "Google Review"
+      }
+    ]
+  },
+  "ctaBanner": {
+    "title": "Ready for beautiful gel toes?",
+    "subtitle": "Reach out today — book your appointment in just a few taps.",
+    "primaryCta": {
+      "label": "WhatsApp Us",
+      "icon": "fab fa-whatsapp"
+    },
+    "secondaryCta": {
+      "label": "Call Now",
+      "href": "tel:+27836543941"
+    }
+  },
+  "footer": {
+    "serviceLinks": [
+      {
+        "label": "Gel Toes",
+        "href": "#services"
+      }
+    ],
+    "quickLinks": [
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "About Us",
+        "href": "#about"
+      },
+      {
+        "label": "Gallery",
+        "href": "#gallery"
+      },
+      {
+        "label": "Reviews",
+        "href": "#testimonials"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "creditText": "Website by",
+    "creditName": "Agile Bridge",
+    "creditUrl": "https://agilebridge.co.za"
+  },
+  "whatsappFab": {
+    "tooltip": "Chat with us!",
+    "message": "Hi! I'd like to book a gel toe appointment please."
+  }
+}

@@ -1,0 +1,5 @@
+{
+	"google_places_api_key": "AIzaSyBpbZxucVYCHOLiJT24Egc80S-qi_urLW8",
+	"max_results_per_search": 15,
+	"notes": "Get your API key from https://console.cloud.google.com/apis/credentials — Enable 'Places API (New)' — Free tier gives $200/month credit"
+}

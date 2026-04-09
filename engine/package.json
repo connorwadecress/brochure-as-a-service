@@ -1,0 +1,15 @@
+{
+  "name": "brochure-engine",
+  "version": "1.0.0",
+  "description": "Token-efficient brochure site generator",
+  "main": "generate.js",
+  "scripts": {
+    "generate": "node generate.js",
+    "generate:example": "node generate.js ../sites/example/site-data.json",
+    "create": "node create-site.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "handlebars": "^4.7.8"
+  }
+}

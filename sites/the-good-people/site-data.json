@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "title": "The Good People | Premium Barber in Lynnwood Ridge, Pretoria",
+    "description": "The Good People — professional barber services in Lynnwood Ridge, Pretoria. Skin fades, signature cuts, beard trims, and hot towel shaves.",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+    "fontAwesomeUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  },
+  "palette": {
+    "brandPrimary": "#fba90e",
+    "brandDark": "#ca8a0a",
+    "brandLight": "#fef3c7"
+  },
+  "business": {
+    "name": "The Good People",
+    "logoBefore": "The Good",
+    "logoHighlight": "People",
+    "tagline": "Premium barber services in Lynnwood Ridge — where quality cuts meet friendly service."
+  },
+  "contact": {
+    "phone": {
+      "display": "076 448 2007",
+      "href": "+27764482007"
+    },
+    "whatsapp": {
+      "number": "27764482007",
+      "message": "Hi, I'd like to book an appointment at The Good People. Can you help?"
+    },
+    "email": "N/A",
+    "address": "Lynnwood Service Rd, Lynnwood Ridge, Pretoria, 0081",
+    "formAction": null
+  },
+  "hours": [
+    {
+      "days": "Monday – Friday",
+      "time": "08:00 – 17:00"
+    },
+    {
+      "days": "Saturday",
+      "time": "08:00 – 13:00"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed"
+    }
+  ],
+  "social": [
+    {
+      "url": "https://www.instagram.com/thee_unlimitxd_barber?igsh=MXZybW1uanVhOW5uZw==",
+      "icon": "fab fa-instagram",
+      "label": "Instagram"
+    },
+    {
+      "url": "https://www.instagram.com/thee_unlimitxd_barber?igsh=MXZybW1uanVhOW5uZw==",
+      "icon": "fab fa-facebook-f",
+      "label": "Facebook"
+    }
+  ],
+  "navLinks": [
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Our Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Reviews",
+      "href": "#testimonials"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "badge": {
+      "icon": "fas fa-map-marker-alt",
+      "text": "Lynnwood Ridge, Pretoria East"
+    },
+    "titleLine1": "Quality Cuts,",
+    "titleLine2": "Real Service",
+    "titleHighlight": ".",
+    "subtitle": "The Good People is Pretoria's destination for professional barbering. Sharp fades, signature cuts, and grooming that's done right — every time.",
+    "primaryCta": {
+      "label": "Book Now",
+      "icon": "fab fa-whatsapp"
+    },
+    "secondaryCta": {
+      "label": "Call Us",
+      "icon": "fas fa-phone"
+    },
+    "trustAvatars": [
+      "TK",
+      "JM",
+      "LS",
+      "RC"
+    ],
+    "trustText": "Trusted by 100+ clients",
+    "trustSubtext": "in Pretoria East",
+    "image": {
+      "src": null,
+      "alt": "The Good People barber shop",
+      "placeholderIcon": "fas fa-scissors"
+    },
+    "floatingCard": {
+      "icon": "fas fa-star",
+      "title": "Expert Barbers",
+      "subtitle": "Precision & Style"
+    }
+  },
+  "trustBar": [
+    {
+      "value": "5",
+      "suffix": "+",
+      "label": "Years of Excellence"
+    },
+    {
+      "value": "100",
+      "suffix": "+",
+      "label": "Happy Clients"
+    },
+    {
+      "value": "4.9",
+      "suffix": "★",
+      "label": "Google Rating"
+    },
+    {
+      "value": "6",
+      "suffix": "",
+      "label": "Expert Services"
+    }
+  ],
+  "services": {
+    "label": "What We Offer",
+    "title": "Our Services",
+    "subtitle": "Professional barber services designed to keep you looking sharp.",
+    "items": [
+      {
+        "icon": "fas fa-cut",
+        "title": "Skin Fade",
+        "description": "Precision fade cuts that blend seamlessly from skin to longer hair. Clean, sharp lines every time."
+      },
+      {
+        "icon": "fas fa-scissors",
+        "title": "Signature Cut",
+        "description": "Our signature haircut tailored to your style and face shape using traditional scissor work and technique."
+      },
+      {
+        "icon": "fas fa-beard",
+        "title": "Beard Trim & Shape",
+        "description": "Expert beard grooming with precise shaping and edging to keep your facial hair looking its best."
+      },
+      {
+        "icon": "fas fa-fire",
+        "title": "Hot Towel Shave",
+        "description": "A classic barber experience — hot towel shave with finishing products for smooth, comfortable skin."
+      },
+      {
+        "icon": "fas fa-spa",
+        "title": "Grooming Package",
+        "description": "Complete grooming treatment combining haircut, beard trim, and hot towel shave at a great value."
+      },
+      {
+        "icon": "fas fa-comb",
+        "title": "Line-up & Finish",
+        "description": "Quick touch-ups and edge work to keep your cut sharp between full appointments."
+      }
+    ]
+  },
+  "about": {
+    "label": "About Us",
+    "title": "The Good People Story",
+    "paragraphs": [
+      "The Good People is Lynnwood Ridge's premier barber shop, built on the foundation of quality craftsmanship and genuine hospitality. Our barbers are trained professionals who take pride in every cut.",
+      "We believe in the timeless tradition of professional barbering — where attention to detail, client relationships, and good service are never compromised. Whether you're a regular or visiting us for the first time, you'll feel right at home."
+    ],
+    "bulletPoints": [
+      "Experienced, trained barbers",
+      "Precision cuts and fades",
+      "Quality products used",
+      "Relaxed, welcoming atmosphere"
+    ],
+    "bulletIcon": "fas fa-check-circle",
+    "ctaLabel": "WhatsApp Us",
+    "ctaIcon": "fab fa-whatsapp",
+    "image": {
+      "src": null,
+      "alt": "The Good People barber team",
+      "placeholderIcon": "fas fa-user-tie"
+    }
+  },
+  "gallery": {
+    "enabled": true,
+    "label": "Our Work",
+    "title": "See Our Cuts",
+    "subtitle": "Browse examples of our barber work and styling from clients across Pretoria East.",
+    "items": [
+      {
+        "src": null,
+        "alt": "Skin fade cut",
+        "placeholderLabel": "Skin Fade"
+      },
+      {
+        "src": null,
+        "alt": "Signature cut",
+        "placeholderLabel": "Signature Cut"
+      },
+      {
+        "src": null,
+        "alt": "Beard trim and shape",
+        "placeholderLabel": "Beard Grooming"
+      },
+      {
+        "src": null,
+        "alt": "Barber work detail",
+        "placeholderLabel": "Detail Work"
+      },
+      {
+        "src": null,
+        "alt": "Client satisfaction",
+        "placeholderLabel": "Client Results"
+      }
+    ]
+  },
+  "testimonials": {
+    "enabled": true,
+    "label": "Happy Clients",
+    "title": "What People Say",
+    "subtitle": "Real feedback from real clients in Pretoria.",
+    "items": [
+      {
+        "stars": 5,
+        "quote": "Always a pleasure to see my favourite barber in town. Quality service as usual — professionals at this business. Great haircuts, every single time.",
+        "authorName": "Jan-Michael Roux",
+        "authorInitials": "JM",
+        "authorRole": "Regular Client"
+      },
+      {
+        "stars": 5,
+        "quote": "The fade is perfect — sharp lines, clean work. These guys know what they're doing. Highly recommend The Good People for anyone wanting a quality cut.",
+        "authorName": "Thabo Khumalo",
+        "authorInitials": "TK",
+        "authorRole": "Google Review"
+      },
+      {
+        "stars": 5,
+        "quote": "Excellent service and great atmosphere. The barbers are friendly and take their time to get your cut right. Best barber shop in Lynnwood Ridge.",
+        "authorName": "Lindiwe Sithole",
+        "authorInitials": "LS",
+        "authorRole": "Facebook Review"
+      }
+    ]
+  },
+  "ctaBanner": {
+    "title": "Ready for a fresh cut?",
+    "subtitle": "Book your appointment today — walk-ins always welcome.",
+    "primaryCta": {
+      "label": "WhatsApp Us",
+      "icon": "fab fa-whatsapp"
+    },
+    "secondaryCta": {
+      "label": "Call 076 448 2007",
+      "href": "tel:+27764482007"
+    }
+  },
+  "footer": {
+    "serviceLinks": [
+      {
+        "label": "Skin Fade",
+        "href": "#services"
+      },
+      {
+        "label": "Signature Cut",
+        "href": "#services"
+      },
+      {
+        "label": "Beard Trim",
+        "href": "#services"
+      },
+      {
+        "label": "Grooming Package",
+        "href": "#services"
+      }
+    ],
+    "quickLinks": [
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "About Us",
+        "href": "#about"
+      },
+      {
+        "label": "Our Work",
+        "href": "#gallery"
+      },
+      {
+        "label": "Reviews",
+        "href": "#testimonials"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "creditText": "Website by",
+    "creditName": "Agile Bridge",
+    "creditUrl": "https://agilebridge.co.za"
+  },
+  "whatsappFab": {
+    "tooltip": "Chat with us on WhatsApp!",
+    "message": "Hi, I saw The Good People on your website and I'd like to book an appointment!"
+  }
+}

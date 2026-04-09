@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haley&#x27;s Beauty Therapy | Professional Gel Toes in Durban</title>
+    <meta name="description" content="Haley&#x27;s Beauty Therapy — professional gel toe services in Chatsworth, Durban. Quality beauty treatments using professional-grade products." />
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+    <style>
+  /* ============================================================
+     DESIGN TOKENS — Lepton X-inspired --site-* prefix
+     These are sensible defaults. Per-site palette overrides
+     are injected via a second :root{} block from site-data.json.
+     ============================================================ */
+  :root {
+    /* === Brand === */
+    --site-brand-primary:     #1a6cf0;
+    --site-brand-dark:        #0f4bb5;
+    --site-brand-light:       #e8f0fe;
+  
+    /* === WhatsApp (fixed brand colours) === */
+    --site-whatsapp-green:    #25d366;
+    --site-whatsapp-hover:    #1da851;
+  
+    /* === Semantic === */
+    --site-color-star:        #f59e0b;
+    --site-color-success:     #22c55e;
+  
+    /* === Text === */
+    --site-text-heading:      #0d1117;
+    --site-text-body:         #374151;
+    --site-text-muted:        #6b7280;
+    --site-text-inverse:      #ffffff;
+  
+    /* === Backgrounds === */
+    --site-bg-white:          #ffffff;
+    --site-bg-light:          #f8fafc;
+    --site-bg-dark:           #0d1117;
+    --site-bg-form-dropdown:  #1a1a2e;
+  
+    /* === Border === */
+    --site-border-color:      #e5e7eb;
+  
+    /* === Radius === */
+    --site-radius-xs:         6px;
+    --site-radius-sm:         8px;
+    --site-radius:            12px;
+    --site-radius-lg:         20px;
+    --site-radius-full:       50%;
+    --site-radius-pill:       100px;
+  
+    /* === Shadows === */
+    --site-shadow-sm:         0 1px 3px rgba(0,0,0,.08);
+    --site-shadow-md:         0 4px 16px rgba(0,0,0,.10);
+    --site-shadow-lg:         0 8px 32px rgba(0,0,0,.12);
+  
+    /* === Spacing === */
+    --site-spacing-xs:        4px;
+    --site-spacing-sm:        8px;
+    --site-spacing-md:        16px;
+    --site-spacing-lg:        24px;
+    --site-spacing-xl:        32px;
+    --site-spacing-2xl:       48px;
+    --site-spacing-3xl:       64px;
+    --site-spacing-4xl:       80px;
+  
+    /* === Typography === */
+    --site-font-family:       'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --site-font-size-xs:      0.8rem;
+    --site-font-size-sm:      0.85rem;
+    --site-font-size-base:    1rem;
+    --site-font-size-md:      1.05rem;
+    --site-font-size-lg:      1.2rem;
+    --site-font-size-xl:      clamp(1.75rem, 4vw, 2.5rem);
+    --site-font-size-2xl:     clamp(2.2rem, 5vw, 3.5rem);
+    --site-font-size-label:   13px;
+  
+    /* === Layout === */
+    --site-nav-height:        68px;
+    --site-container-max:     1140px;
+    --site-container-padding: 24px;
+  
+    /* === Overlays (dark-section glass effects) === */
+    --site-overlay-light-95:  rgba(255,255,255,.95);
+    --site-overlay-white-05:  rgba(255,255,255,.05);
+    --site-overlay-white-07:  rgba(255,255,255,.07);
+    --site-overlay-white-08:  rgba(255,255,255,.08);
+    --site-overlay-white-10:  rgba(255,255,255,.1);
+    --site-overlay-white-15:  rgba(255,255,255,.15);
+    --site-overlay-white-25:  rgba(255,255,255,.25);
+    --site-overlay-white-35:  rgba(255,255,255,.35);
+    --site-overlay-white-50:  rgba(255,255,255,.5);
+    --site-overlay-white-60:  rgba(255,255,255,.6);
+    --site-overlay-white-70:  rgba(255,255,255,.7);
+    --site-overlay-white-80:  rgba(255,255,255,.8);
+  }
+  
+  /* ============================================================
+     RESET & BASE
+     ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  html { scroll-behavior: smooth; font-size: 16px; }
+  
+  body {
+    font-family: var(--site-font-family);
+    color: var(--site-text-body);
+    background: var(--site-bg-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  
+  /* ============================================================
+     UTILITY
+     ============================================================ */
+  .container {
+    width: 100%;
+    max-width: var(--site-container-max);
+    margin: 0 auto;
+    padding: 0 var(--site-container-padding);
+  }
+  
+  .section { padding: var(--site-spacing-4xl) 0; }
+  .section--alt { background: var(--site-bg-light); }
+  
+  .section-label {
+    font-size: var(--site-font-size-label);
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--site-brand-primary);
+    margin-bottom: 12px;
+  }
+  
+  .section-title {
+    font-size: var(--site-font-size-xl);
+    font-weight: 800;
+    color: var(--site-text-heading);
+    line-height: 1.2;
+    margin-bottom: var(--site-spacing-md);
+  }
+  
+  .section-subtitle {
+    font-size: var(--site-font-size-md);
+    color: var(--site-text-muted);
+    max-width: 560px;
+  }
+  
+  .section-header { margin-bottom: 56px; }
+  .section-header--center { text-align: center; }
+  .section-header--center .section-subtitle { margin: 0 auto; }
+  
+  /* ============================================================
+     BUTTONS
+     ============================================================ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--site-spacing-sm);
+    padding: 14px 28px;
+    border-radius: var(--site-radius-sm);
+    font-family: var(--site-font-family);
+    font-size: var(--site-font-size-base);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all .2s ease;
+    white-space: nowrap;
+  }
+  
+  .btn-primary {
+    background: var(--site-brand-primary);
+    color: var(--site-text-inverse);
+  }
+  .btn-primary:hover {
+    background: var(--site-brand-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--site-shadow-md);
+  }
+  
+  .btn-outline {
+    background: transparent;
+    color: var(--site-brand-primary);
+    border: 2px solid var(--site-brand-primary);
+  }
+  .btn-outline:hover {
+    background: var(--site-brand-light);
+    transform: translateY(-1px);
+  }
+  
+  .btn-whatsapp {
+    background: var(--site-whatsapp-green);
+    color: var(--site-text-inverse);
+  }
+  .btn-whatsapp:hover {
+    background: var(--site-whatsapp-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--site-shadow-md);
+  }
+  
+  .btn-white {
+    background: var(--site-bg-white);
+    color: var(--site-brand-primary);
+  }
+  .btn-white:hover {
+    background: var(--site-brand-light);
+    transform: translateY(-1px);
+  }
+  
+  /* ============================================================
+     NAVIGATION
+     ============================================================ */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--site-nav-height);
+    background: var(--site-overlay-light-95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--site-border-color);
+    z-index: 1000;
+    transition: box-shadow .2s;
+  }
+  
+  .nav.scrolled { box-shadow: var(--site-shadow-md); }
+  
+  .nav__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav__logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--site-text-heading);
+  }
+  .nav__logo span { color: var(--site-brand-primary); }
+  
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: var(--site-spacing-xl);
+    list-style: none;
+  }
+  
+  .nav__links a {
+    font-size: .95rem;
+    font-weight: 500;
+    color: var(--site-text-body);
+    transition: color .2s;
+  }
+  .nav__links a:hover { color: var(--site-brand-primary); }
+  
+  .nav__cta { margin-left: var(--site-spacing-md); }
+  
+  /* Hamburger */
+  .nav__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--site-spacing-xs);
+  }
+  .nav__burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--site-text-heading);
+    border-radius: 2px;
+    transition: all .3s;
+  }
+  
+  /* Mobile nav */
+  .nav__mobile {
+    display: none;
+    position: fixed;
+    top: var(--site-nav-height);
+    left: 0; right: 0;
+    background: var(--site-bg-white);
+    border-bottom: 1px solid var(--site-border-color);
+    padding: var(--site-spacing-lg);
+    box-shadow: var(--site-shadow-lg);
+    z-index: 999;
+  }
+  .nav__mobile.open { display: block; }
+  
+  .nav__mobile ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav__mobile li a {
+    display: block;
+    padding: 14px 0;
+    font-size: var(--site-font-size-base);
+    font-weight: 500;
+    color: var(--site-text-body);
+    border-bottom: 1px solid var(--site-border-color);
+  }
+  .nav__mobile .btn { width: 100%; justify-content: center; margin-top: 20px; }
+  
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero {
+    padding-top: calc(var(--site-nav-height) + var(--site-spacing-4xl));
+    padding-bottom: var(--site-spacing-4xl);
+    background: linear-gradient(135deg, var(--site-bg-white) 0%, var(--site-brand-light) 100%);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(26,108,240,.08) 0%, transparent 70%);
+    border-radius: var(--site-radius-full);
+  }
+  
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--site-spacing-3xl);
+    align-items: center;
+  }
+  
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--site-spacing-sm);
+    background: var(--site-brand-light);
+    color: var(--site-brand-primary);
+    font-size: var(--site-font-size-label);
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: var(--site-radius-pill);
+    margin-bottom: var(--site-spacing-lg);
+  }
+  .hero__badge i { font-size: 11px; }
+  
+  .hero__title {
+    font-size: var(--site-font-size-2xl);
+    font-weight: 800;
+    color: var(--site-text-heading);
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .hero__title span { color: var(--site-brand-primary); }
+  
+  .hero__sub {
+    font-size: 1.1rem;
+    color: var(--site-text-muted);
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+  
+  .hero__actions {
+    display: flex;
+    gap: var(--site-spacing-md);
+    flex-wrap: wrap;
+  }
+  
+  .hero__trust {
+    margin-top: var(--site-spacing-2xl);
+    display: flex;
+    align-items: center;
+    gap: var(--site-spacing-md);
+    flex-wrap: wrap;
+  }
+  
+  .hero__trust-avatars {
+    display: flex;
+  }
+  .hero__trust-avatars span {
+    width: 36px; height: 36px;
+    border-radius: var(--site-radius-full);
+    background: var(--site-brand-primary);
+    border: 2px solid var(--site-bg-white);
+    margin-left: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+  }
+  .hero__trust-avatars span:first-child { margin-left: 0; }
+  .hero__trust-text {
+    font-size: .875rem;
+    color: var(--site-text-muted);
+  }
+  .hero__trust-text strong { color: var(--site-text-heading); }
+  
+  /* Hero image placeholder */
+  .hero__image {
+    position: relative;
+  }
+  .hero__img-wrap {
+    border-radius: var(--site-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--site-shadow-lg);
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--site-brand-light), var(--site-brand-primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero__img-placeholder {
+    text-align: center;
+    color: white;
+    padding: var(--site-spacing-lg);
+  }
+  .hero__img-placeholder i {
+    font-size: 64px;
+    opacity: .6;
+    margin-bottom: 12px;
+  }
+  .hero__img-placeholder p {
+    font-size: .875rem;
+    opacity: .7;
+  }
+  
+  /* Floating card on hero image */
+  .hero__card {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background: var(--site-bg-white);
+    border-radius: var(--site-radius);
+    padding: var(--site-spacing-md) 20px;
+    box-shadow: var(--site-shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero__card-icon {
+    width: 44px; height: 44px;
+    background: var(--site-brand-light);
+    border-radius: var(--site-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--site-brand-primary);
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .hero__card-text strong {
+    display: block;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--site-text-heading);
+  }
+  .hero__card-text span {
+    font-size: var(--site-font-size-xs);
+    color: var(--site-text-muted);
+  }
+  
+  /* ============================================================
+     TRUST BAR / STATS
+     ============================================================ */
+  .trust-bar {
+    padding: var(--site-spacing-2xl) 0;
+    border-top: 1px solid var(--site-border-color);
+    border-bottom: 1px solid var(--site-border-color);
+  }
+  
+  .trust-bar__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--site-spacing-xl);
+    text-align: center;
+  }
+  
+  .trust-stat__number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--site-text-heading);
+    display: block;
+  }
+  .trust-stat__number span { color: var(--site-brand-primary); }
+  .trust-stat__label {
+    font-size: .875rem;
+    color: var(--site-text-muted);
+    margin-top: var(--site-spacing-xs);
+  }
+  
+  /* ============================================================
+     SERVICES
+     ============================================================ */
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--site-spacing-lg);
+  }
+  
+  .service-card {
+    background: var(--site-bg-white);
+    border: 1px solid var(--site-border-color);
+    border-radius: var(--site-radius);
+    padding: var(--site-spacing-xl) 28px;
+    transition: all .2s ease;
+  }
+  .service-card:hover {
+    border-color: var(--site-brand-primary);
+    box-shadow: var(--site-shadow-md);
+    transform: translateY(-4px);
+  }
+  
+  .service-card__icon {
+    width: 52px; height: 52px;
+    background: var(--site-brand-light);
+    border-radius: var(--site-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--site-brand-primary);
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .service-card__title {
+    font-size: var(--site-font-size-md);
+    font-weight: 700;
+    color: var(--site-text-heading);
+    margin-bottom: var(--site-spacing-sm);
+  }
+  
+  .service-card__desc {
+    font-size: .9rem;
+    color: var(--site-text-muted);
+    line-height: 1.6;
+  }
+  
+  /* ============================================================
+     ABOUT
+     ============================================================ */
+  .about__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--site-spacing-4xl);
+    align-items: center;
+  }
+  
+  .about__img-wrap {
+    border-radius: var(--site-radius-lg);
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--site-brand-light), var(--site-brand-primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--site-shadow-lg);
+  }
+  .about__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about__img-placeholder {
+    text-align: center;
+    color: white;
+    padding: var(--site-spacing-lg);
+  }
+  .about__img-placeholder i {
+    font-size: 72px;
+    opacity: .5;
+    margin-bottom: 12px;
+  }
+  .about__img-placeholder p {
+    font-size: .875rem;
+    opacity: .65;
+  }
+  
+  .about__text {
+    color: var(--site-text-muted);
+    margin-bottom: var(--site-spacing-md);
+  }
+  
+  .about__list {
+    list-style: none;
+    margin: 28px 0 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .about__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: .95rem;
+    color: var(--site-text-body);
+  }
+  .about__list li i {
+    color: var(--site-brand-primary);
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  
+  /* ============================================================
+     GALLERY
+     ============================================================ */
+  .gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--site-spacing-md);
+  }
+  
+  .gallery__item {
+    border-radius: var(--site-radius);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--site-brand-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s;
+  }
+  .gallery__item:hover { transform: scale(1.02); }
+  .gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery__item--placeholder {
+    flex-direction: column;
+    gap: var(--site-spacing-sm);
+    color: var(--site-brand-primary);
+    opacity: .5;
+    font-size: var(--site-font-size-xs);
+    text-align: center;
+  }
+  .gallery__item--placeholder i { font-size: 32px; }
+  
+  /* Span first item for variety */
+  .gallery__item:nth-child(1) { grid-row: span 2; aspect-ratio: unset; }
+  
+  /* ============================================================
+     TESTIMONIALS
+     ============================================================ */
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--site-spacing-lg);
+  }
+  
+  .testimonial-card {
+    background: var(--site-bg-white);
+    border: 1px solid var(--site-border-color);
+    border-radius: var(--site-radius);
+    padding: 28px;
+  }
+  
+  .testimonial-card__stars {
+    color: var(--site-color-star);
+    font-size: var(--site-font-size-sm);
+    margin-bottom: var(--site-spacing-md);
+  }
+  
+  .testimonial-card__quote {
+    font-size: .95rem;
+    color: var(--site-text-body);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .testimonial-card__avatar {
+    width: 40px; height: 40px;
+    border-radius: var(--site-radius-full);
+    background: var(--site-brand-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+  .testimonial-card__name {
+    font-weight: 600;
+    font-size: .9rem;
+    color: var(--site-text-heading);
+  }
+  .testimonial-card__role {
+    font-size: var(--site-font-size-xs);
+    color: var(--site-text-muted);
+  }
+  
+  /* ============================================================
+     CONTACT
+     ============================================================ */
+  .contact { background: var(--site-bg-dark); color: var(--site-text-inverse); }
+  .contact .section-label { color: var(--site-brand-light); opacity: .7; }
+  .contact .section-title { color: var(--site-text-inverse); }
+  
+  .contact__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--site-spacing-4xl);
+    align-items: start;
+  }
+  
+  .contact__info-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--site-spacing-lg);
+    margin-top: 36px;
+  }
+  
+  .contact__info-item {
+    display: flex;
+    gap: var(--site-spacing-md);
+    align-items: flex-start;
+  }
+  .contact__info-icon {
+    width: 44px; height: 44px;
+    border-radius: var(--site-radius-sm);
+    background: var(--site-overlay-white-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--site-text-inverse);
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .contact__info-label {
+    font-size: var(--site-font-size-xs);
+    color: var(--site-overlay-white-50);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 600;
+    margin-bottom: var(--site-spacing-xs);
+  }
+  .contact__info-value {
+    font-size: var(--site-font-size-base);
+    color: var(--site-text-inverse);
+    font-weight: 500;
+  }
+  .contact__info-value a {
+    color: var(--site-text-inverse);
+    transition: opacity .2s;
+  }
+  .contact__info-value a:hover { opacity: .75; }
+  
+  .contact__hours {
+    margin-top: var(--site-spacing-xl);
+    background: var(--site-overlay-white-07);
+    border-radius: var(--site-radius);
+    padding: var(--site-spacing-lg);
+  }
+  .contact__hours h4 {
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--site-overlay-white-60);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: var(--site-spacing-md);
+  }
+  .contact__hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    padding: var(--site-spacing-sm) 0;
+    border-bottom: 1px solid var(--site-overlay-white-08);
+    color: var(--site-overlay-white-80);
+  }
+  .contact__hours-row:last-child { border-bottom: none; }
+  .contact__hours-row span:last-child { font-weight: 500; }
+  
+  /* Contact form */
+  .contact__form {
+    background: var(--site-overlay-white-05);
+    border: 1px solid var(--site-overlay-white-10);
+    border-radius: var(--site-radius);
+    padding: 36px;
+  }
+  .contact__form h3 {
+    font-size: var(--site-font-size-lg);
+    font-weight: 700;
+    color: var(--site-text-inverse);
+    margin-bottom: var(--site-spacing-lg);
+  }
+  
+  .form-group {
+    margin-bottom: var(--site-spacing-md);
+  }
+  .form-group label {
+    display: block;
+    font-size: var(--site-font-size-sm);
+    font-weight: 500;
+    color: var(--site-overlay-white-70);
+    margin-bottom: var(--site-spacing-sm);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px var(--site-spacing-md);
+    background: var(--site-overlay-white-08);
+    border: 1px solid var(--site-overlay-white-15);
+    border-radius: var(--site-radius-sm);
+    font-family: var(--site-font-family);
+    font-size: .95rem;
+    color: var(--site-text-inverse);
+    outline: none;
+    transition: border-color .2s;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--site-overlay-white-35); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--site-brand-primary);
+  }
+  .form-group select option { background: var(--site-bg-form-dropdown); color: white; }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  
+  .form__submit {
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--site-spacing-sm);
+    padding: 15px;
+  }
+  
+  /* Success message */
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: var(--site-spacing-lg);
+  }
+  .form-success i {
+    font-size: 48px;
+    color: var(--site-color-success);
+    margin-bottom: 12px;
+  }
+  .form-success p {
+    color: var(--site-overlay-white-80);
+  }
+  
+  /* ============================================================
+     CTA BANNER
+     ============================================================ */
+  .cta-banner {
+    background: var(--site-brand-primary);
+    padding: var(--site-spacing-3xl) 0;
+    text-align: center;
+  }
+  .cta-banner h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 800;
+    color: var(--site-text-inverse);
+    margin-bottom: 12px;
+  }
+  .cta-banner p {
+    font-size: var(--site-font-size-md);
+    color: var(--site-overlay-white-80);
+    margin-bottom: var(--site-spacing-xl);
+  }
+  .cta-banner__actions {
+    display: flex;
+    gap: var(--site-spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* CTA banner outline button override */
+  .cta-banner .btn-outline {
+    color: white;
+    border-color: var(--site-overlay-white-50);
+  }
+  .cta-banner .btn-outline:hover {
+    background: var(--site-overlay-white-10);
+  }
+  
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  .footer {
+    background: var(--site-bg-dark);
+    padding: 56px 0 32px;
+  }
+  
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--site-spacing-2xl);
+    padding-bottom: var(--site-spacing-2xl);
+    border-bottom: 1px solid var(--site-overlay-white-10);
+  }
+  
+  .footer__logo {
+    font-size: var(--site-font-size-lg);
+    font-weight: 800;
+    color: var(--site-text-inverse);
+    margin-bottom: 14px;
+  }
+  .footer__logo span { color: var(--site-brand-primary); }
+  
+  .footer__tagline {
+    font-size: .9rem;
+    color: var(--site-overlay-white-50);
+    line-height: 1.6;
+    margin-bottom: var(--site-spacing-lg);
+  }
+  
+  .footer__social {
+    display: flex;
+    gap: 12px;
+  }
+  .footer__social a {
+    width: 36px; height: 36px;
+    border-radius: var(--site-radius-full);
+    background: var(--site-overlay-white-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--site-overlay-white-60);
+    font-size: 15px;
+    transition: all .2s;
+  }
+  .footer__social a:hover {
+    background: var(--site-brand-primary);
+    color: white;
+  }
+  
+  .footer__col h4 {
+    font-size: .875rem;
+    font-weight: 700;
+    color: var(--site-text-inverse);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: 20px;
+  }
+  
+  .footer__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__links a {
+    font-size: .9rem;
+    color: var(--site-overlay-white-50);
+    transition: color .2s;
+  }
+  .footer__links a:hover { color: var(--site-text-inverse); }
+  
+  .footer__bottom {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer__copy {
+    font-size: var(--site-font-size-sm);
+    color: var(--site-overlay-white-35);
+  }
+  .footer__credit {
+    font-size: var(--site-font-size-sm);
+    color: var(--site-overlay-white-25);
+  }
+  .footer__credit a {
+    color: rgba(255,255,255,.45);
+    transition: color .2s;
+  }
+  .footer__credit a:hover { color: var(--site-overlay-white-80); }
+  
+  /* Footer contact text (non-link) */
+  .footer__links .footer__links-text {
+    color: var(--site-overlay-white-35);
+    pointer-events: none;
+  }
+  
+  /* ============================================================
+     FLOATING WHATSAPP BUTTON
+     ============================================================ */
+  .whatsapp-fab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px; height: 56px;
+    background: var(--site-whatsapp-green);
+    border-radius: var(--site-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 4px 20px rgba(37,211,102,.4);
+    z-index: 900;
+    transition: all .2s;
+    text-decoration: none;
+  }
+  .whatsapp-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,.55);
+  }
+  
+  .whatsapp-fab__tooltip {
+    position: absolute;
+    right: 64px;
+    background: var(--site-bg-dark);
+    color: white;
+    font-size: var(--site-font-size-xs);
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: var(--site-radius-xs);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
+  }
+  .whatsapp-fab:hover .whatsapp-fab__tooltip { opacity: 1; }
+  
+  /* ============================================================
+     RESPONSIVE — TABLET (≤ 1024px)
+     ============================================================ */
+  @media (max-width: 1024px) {
+    .footer__inner { grid-template-columns: 1fr 1fr; }
+    .trust-bar__grid { grid-template-columns: repeat(2, 1fr); gap: var(--site-spacing-lg); }
+    .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery__item:nth-child(1) { grid-row: span 1; aspect-ratio: 4/3; }
+  }
+  
+  /* ============================================================
+     RESPONSIVE — MOBILE (≤ 768px)
+     ============================================================ */
+  @media (max-width: 768px) {
+    .section { padding: 56px 0; }
+  
+    /* Nav */
+    .nav__links, .nav__cta { display: none; }
+    .nav__burger { display: flex; }
+  
+    /* Hero */
+    .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero__image { display: none; }
+    .hero { padding-top: calc(var(--site-nav-height) + var(--site-spacing-2xl)); padding-bottom: var(--site-spacing-2xl); }
+  
+    /* Services */
+    .services__grid { grid-template-columns: 1fr; }
+  
+    /* About */
+    .about__inner { grid-template-columns: 1fr; gap: 40px; }
+    .about__img-wrap { aspect-ratio: 4/3; }
+  
+    /* Gallery */
+    .gallery__grid { grid-template-columns: 1fr; }
+  
+    /* Testimonials */
+    .testimonials__grid { grid-template-columns: 1fr; }
+  
+    /* Contact */
+    .contact__inner { grid-template-columns: 1fr; gap: 40px; }
+    .contact__form { padding: var(--site-spacing-lg); }
+  
+    /* Footer */
+    .footer__inner { grid-template-columns: 1fr; gap: var(--site-spacing-xl); }
+    .footer__bottom { flex-direction: column; text-align: center; }
+  
+    /* CTA banner */
+    .cta-banner__actions { flex-direction: column; align-items: center; }
+  
+    /* Trust bar */
+    .trust-bar__grid { grid-template-columns: repeat(2, 1fr); }
+  
+    /* Hero actions */
+    .hero__actions { flex-direction: column; }
+    .hero__actions .btn { width: 100%; justify-content: center; }
+  }
+  
+  /* ============================================================
+     RESPONSIVE — SMALL MOBILE (≤ 480px)
+     ============================================================ */
+  @media (max-width: 480px) {
+    .trust-bar__grid { grid-template-columns: 1fr 1fr; }
+    .hero__title { font-size: 2rem; }
+  }
+  
+    </style>
+    <style>
+      :root {
+        --site-brand-primary: #ab6fcd;
+        --site-brand-dark: #8a569a;
+        --site-brand-light: #f3e9f8;
+        
+      }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+      <div class="container">
+        <div class="nav__inner">
+  
+          <a href="#" class="nav__logo">
+            Haley&#x27;s<span>Beauty Therapy</span>
+          </a>
+  
+          <ul class="nav__links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+  
+          <a href="https://wa.me/27836543941" target="_blank" class="btn btn-whatsapp nav__cta">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+  
+          <button class="nav__burger" id="burgerBtn" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+  
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Mobile nav -->
+    <div class="nav__mobile" id="mobileNav">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/27836543941" target="_blank" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero__inner">
+  
+          <div class="hero__content">
+            <div class="hero__badge">
+              <i class="fas fa-map-marker-alt"></i>
+              Chatsworth, Durban
+            </div>
+  
+            <h1 class="hero__title">
+              Beautiful Gel<br/>Toes Done Right<span>.</span>
+            </h1>
+  
+            <p class="hero__sub">Professional gel toe treatments with premium products and expert care. Book your appointment today and step out with confidence.</p>
+  
+            <div class="hero__actions">
+              <a href="https://wa.me/27836543941?text=Hi!%20I&#x27;d%20like%20to%20book%20a%20gel%20toe%20appointment%20please." target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Book Now
+              </a>
+              <a href="tel:+27836543941" class="btn btn-outline">
+                <i class="fas fa-phone"></i> Call Us
+              </a>
+            </div>
+  
+            <div class="hero__trust">
+              <div class="hero__trust-avatars">
+                <span>LM</span><span>HC</span><span>NP</span>
+              </div>
+              <div class="hero__trust-text">
+                <strong>Trusted by locals</strong><br/>in Chatsworth &amp; surrounds
+              </div>
+            </div>
+          </div>
+  
+          <div class="hero__image">
+            <div class="hero__img-wrap">
+              <div class="hero__img-placeholder">
+                <i class="fas fa-cut"></i>
+                <p>Replace with a<br/>great business photo</p>
+              </div>
+            </div>
+  
+            <div class="hero__card">
+              <div class="hero__card-icon">
+                <i class="fas fa-sparkles"></i>
+              </div>
+              <div class="hero__card-text">
+                <strong>Premium Products</strong>
+                <span>Professional-grade quality</span>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+      <div class="container">
+        <div class="trust-bar__grid">
+          <div class="trust-stat">
+            <span class="trust-stat__number">100<span>%</span></span>
+            <p class="trust-stat__label">Professional Results</p>
+          </div>
+          <div class="trust-stat">
+            <span class="trust-stat__number">5<span>★</span></span>
+            <p class="trust-stat__label">Quality Standards</p>
+          </div>
+          <div class="trust-stat">
+            <span class="trust-stat__number">Fresh<span></span></span>
+            <p class="trust-stat__label">Designs Weekly</p>
+          </div>
+          <div class="trust-stat">
+            <span class="trust-stat__number">Expert<span></span></span>
+            <p class="trust-stat__label">Application</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <p class="section-label">What We Offer</p>
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-subtitle">Professional beauty treatments tailored to make you feel confident and pampered.</p>
+        </div>
+  
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fas fa-foot"></i></div>
+            <h3 class="service-card__title">Gel Toes</h3>
+            <p class="service-card__desc">Stunning, long-lasting gel toe treatments using professional-grade products. Perfect for special occasions or everyday luxury — your nails will shine for weeks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about__inner">
+  
+          <div class="about__img-wrap">
+            <div class="about__img-placeholder">
+              <i class="fas fa-heart"></i>
+              <p>Owner / Team photo<br/>goes here</p>
+            </div>
+          </div>
+  
+          <div class="about__content">
+            <p class="section-label">About Us</p>
+            <h2 class="section-title">Haley&#x27;s Beauty Therapy</h2>
+  
+            <p class="about__text">Welcome to Haley&#x27;s Beauty Therapy — your go-to destination for professional beauty treatments in Chatsworth. We pride ourselves on delivering expert-level care with premium products and a personal touch.</p>
+            <p class="about__text">Every client is unique, and we take time to understand what makes you feel beautiful. From the moment you walk in, you&#x27;ll experience friendly service, attention to detail, and results that last.</p>
+  
+            <ul class="about__list">
+              <li><i class="fas fa-check-circle"></i> Professional-grade products</li>
+              <li><i class="fas fa-check-circle"></i> Expert application every time</li>
+              <li><i class="fas fa-check-circle"></i> Long-lasting results</li>
+              <li><i class="fas fa-check-circle"></i> Welcoming, relaxing atmosphere</li>
+            </ul>
+  
+            <a href="https://wa.me/27836543941" target="_blank" class="btn btn-primary">
+              <i class="fab fa-whatsapp"></i> Get in Touch
+            </a>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <p class="section-label">Our Work</p>
+          <h2 class="section-title">See Our Designs</h2>
+          <p class="section-subtitle">Browse beautiful gel toe designs from our recent clients.</p>
+        </div>
+  
+        <div class="gallery__grid">
+          <div class="gallery__item">
+            <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Design 1</span></div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Design 2</span></div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Design 3</span></div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Design 4</span></div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__item--placeholder"><i class="fas fa-image"></i><span>Design 5</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <p class="section-label">Client Feedback</p>
+          <h2 class="section-title">What People Say</h2>
+          <p class="section-subtitle">Real reviews from happy clients in Durban.</p>
+        </div>
+  
+        <div class="testimonials__grid">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">"Haley&#x27;s work is absolutely flawless. My gel toes look incredible and lasted for weeks without chipping. The service is so friendly and professional — highly recommended!"</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">LM</div>
+              <div>
+                <div class="testimonial-card__name">Lucretia Mohan</div>
+                <div class="testimonial-card__role">Client Review</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">"I&#x27;ve been getting my gel toes done at Haley&#x27;s for months now. The designs are creative, the products are clearly premium quality, and the attention to detail is amazing."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">NP</div>
+              <div>
+                <div class="testimonial-card__name">Naledi Petersen</div>
+                <div class="testimonial-card__role">Regular Client</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">"Best gel toe experience in Chatsworth. Haley is so skilled and makes you feel completely at ease. My nails have never looked better — will definitely be back!"</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">HC</div>
+              <div>
+                <div class="testimonial-card__name">Hlengiwe Cele</div>
+                <div class="testimonial-card__role">Google Review</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Ready for beautiful gel toes?</h2>
+        <p>Reach out today — book your appointment in just a few taps.</p>
+        <div class="cta-banner__actions">
+          <a href="https://wa.me/27836543941?text=Hi!%20I&#x27;d%20like%20to%20book%20a%20gel%20toe%20appointment%20please." target="_blank" class="btn btn-white">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+          <a href="tel:+27836543941" class="btn btn-outline">
+            Call Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__inner">
+  
+          <div class="contact__info">
+            <p class="section-label">Get In Touch</p>
+            <h2 class="section-title">Contact Us</h2>
+  
+            <div class="contact__info-items">
+  
+              <div class="contact__info-item">
+                <div class="contact__info-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <p class="contact__info-label">Phone</p>
+                  <p class="contact__info-value">
+                    <a href="tel:+27836543941">083 654 3941</a>
+                  </p>
+                </div>
+              </div>
+  
+              <div class="contact__info-item">
+                <div class="contact__info-icon"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <p class="contact__info-label">WhatsApp</p>
+                  <p class="contact__info-value">
+                    <a href="https://wa.me/27836543941" target="_blank">083 654 3941</a>
+                  </p>
+                </div>
+              </div>
+  
+              <div class="contact__info-item">
+                <div class="contact__info-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <p class="contact__info-label">Email</p>
+                  <p class="contact__info-value">
+                    <a href="mailto:"></a>
+                  </p>
+                </div>
+              </div>
+  
+              <div class="contact__info-item">
+                <div class="contact__info-icon"><i class="fas fa-location-dot"></i></div>
+                <div>
+                  <p class="contact__info-label">Location</p>
+                  <p class="contact__info-value">107 Klaarwater Road, Shallcross, Chatsworth, South Africa</p>
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="contact__hours">
+              <h4>Trading Hours</h4>
+              <div class="contact__hours-row">
+                <span>Monday – Friday</span>
+                <span>10:00 – 18:00</span>
+              </div>
+              <div class="contact__hours-row">
+                <span>Saturday</span>
+                <span>08:30 – 15:00</span>
+              </div>
+              <div class="contact__hours-row">
+                <span>Sunday</span>
+                <span>Closed</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact__form">
+            <h3>Send Us a Message</h3>
+  
+            <form id="contactForm" action="" method="POST">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="073 XXX XXXX" required />
+              </div>
+              <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                  <option value="">Select a service...</option>
+                  <option>Gel Toes</option>
+                  <option>Other / Not sure</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us a bit about what you need..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form__submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+  
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-circle-check"></i>
+              <p>Thanks! We'll be in touch soon.</p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+  
+          <div>
+            <div class="footer__logo">Haley&#x27;s<span>Beauty Therapy</span></div>
+            <p class="footer__tagline">Professional beauty treatments with premium products right here in Chatsworth.</p>
+            <div class="footer__social">
+              <a href="https://www.facebook.com/haleysbeautytherapy" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/haleysbeauty_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/27836543941" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+  
+          <div class="footer__col">
+            <h4>Services</h4>
+            <ul class="footer__links">
+              <li><a href="#services">Gel Toes</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer__col">
+            <h4>Quick Links</h4>
+            <ul class="footer__links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#testimonials">Reviews</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer__col">
+            <h4>Contact</h4>
+            <ul class="footer__links">
+              <li><a href="tel:+27836543941">083 654 3941</a></li>
+              <li><a href="mailto:"></a></li>
+              <li><a href="https://wa.me/27836543941" target="_blank">WhatsApp Us</a></li>
+              <li><span class="footer__links-text">107 Klaarwater Road, Shallcross, Chatsworth, South Africa</span></li>
+            </ul>
+          </div>
+  
+        </div>
+  
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            &copy; <span id="year"></span> Haley&#x27;s Beauty Therapy. All rights reserved.
+          </p>
+          <p class="footer__credit">
+            Website by <a href="https://agilebridge.co.za" target="_blank">Agile Bridge</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27836543941?text=Hi!%20I&#x27;d%20like%20to%20book%20a%20gel%20toe%20appointment%20please."
+       target="_blank"
+       class="whatsapp-fab"
+       aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-fab__tooltip">Chat with us!</span>
+    </a>
+
+  <script>
+(function () {
+  // Auto-update copyright year
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Navbar scroll shadow
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function () {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile hamburger toggle
+  var burger = document.getElementById('burgerBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  burger.addEventListener('click', function () {
+    mobileNav.classList.toggle('open');
+  });
+
+  // Close mobile nav when a link is clicked
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.remove('open');
+    });
+  });
+
+  // Contact form — show success message on submit
+  var form = document.getElementById('contactForm');
+  var successMsg = document.getElementById('formSuccess');
+
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var data = new FormData(form);
+
+      try {
+        await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' }
+        });
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      } catch (err) {
+        alert('Something went wrong. Please try WhatsApp instead.');
+      }
+    });
+  }
+
+  // Smooth anchor offset (accounts for fixed navbar)
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offset = navbar.offsetHeight + 16;
+        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+      }
+    });
+  });
+})();
+
+  </script>
+
+</body>
+</html>

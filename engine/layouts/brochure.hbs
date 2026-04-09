@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> head}}
+</head>
+
+<body>
+
+  {{> nav}}
+
+  {{> hero}}
+
+  {{#if trustBar}}
+  {{> trust-bar}}
+  {{/if}}
+
+  {{> services}}
+
+  {{#if about}}
+  {{> about}}
+  {{/if}}
+
+  {{#if gallery}}
+  {{#if gallery.enabled}}
+  {{> gallery}}
+  {{/if}}
+  {{/if}}
+
+  {{#if testimonials}}
+  {{#if testimonials.enabled}}
+  {{> testimonials}}
+  {{/if}}
+  {{/if}}
+
+  {{#if ctaBanner}}
+  {{> cta-banner}}
+  {{/if}}
+
+  {{> contact}}
+
+  {{> footer}}
+
+  {{#if whatsappFab}}
+  {{> whatsapp-fab}}
+  {{/if}}
+
+  <script>
+{{{inlineJs}}}
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+  <!-- Services -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <p class="section-label">{{services.label}}</p>
+        <h2 class="section-title">{{services.title}}</h2>
+        <p class="section-subtitle">{{services.subtitle}}</p>
+      </div>
+
+      <div class="services__grid">
+        {{#each services.items}}
+        <div class="service-card">
+          <div class="service-card__icon"><i class="{{this.icon}}"></i></div>
+          <h3 class="service-card__title">{{this.title}}</h3>
+          <p class="service-card__desc">{{this.description}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>

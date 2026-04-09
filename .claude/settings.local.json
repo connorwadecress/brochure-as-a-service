@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python prospector.py --list)",
+      "Bash(xxd \"/c/Users/ConnorCress/source/BrochureAsAService/pipeline/Run-Prospector.ps1\")"
+    ]
+  }
+}
