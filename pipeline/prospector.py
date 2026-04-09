@@ -135,7 +135,7 @@ def _print_leads(leads: list) -> None:
     print(f"  LEADS FOUND")
     print(f"  {'=' * 50}\n")
     for i, lead in enumerate(leads, 1):
-        rating_str = f"{lead['rating']}★ ({lead['reviews']} reviews)" if lead["rating"] else "No rating"
+        rating_str = f"{lead['rating']} stars ({lead['reviews']} reviews)" if lead["rating"] else "No rating"
         print(f"  {i}. {lead['name']}")
         print(f"     Phone:   {lead['phone'] or 'Not listed'}")
         print(f"     Area:    {lead['address']}")

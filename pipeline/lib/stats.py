@@ -35,7 +35,7 @@ def show_stats(state: dict) -> None:
     by_province: dict = {}
 
     for row in range(DATA_START_ROW, ws.max_row + 1):
-        name = ws.cell(row=row, column=1).value
+        name = ws.cell(row=row, column=2).value  # B: Business Name
         if not name or str(name).startswith(EXAMPLE_PREFIX):
             continue
 
