@@ -2,8 +2,6 @@
 
 A two-part system for generating single-page brochure websites for small South African businesses and prospecting qualified leads via Google Maps.
 
-Built by [Agile Bridge](https://agilebridge.co.za).
-
 ---
 
 ## System Overview
